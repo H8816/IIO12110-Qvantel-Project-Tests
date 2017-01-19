@@ -1,0 +1,120 @@
+*** Settings ***
+Resource    resource.robot
+Library    Selenium2Library
+
+*** Test Cases ***
+Testi
+    Open Index Page
+
+Rekisteroityminen
+    Open Index Page
+    Click Link    /user/register
+    Wait Until Page Contains    Home    
+    Page Should Contain    Home
+    Click Link    /
+    Close Browser
+
+Vaara kirjautuminen name & pass
+    Open Index Page
+    Input False Name
+    Input False Password
+    Send Form
+    Page Should Contain    Error message
+    Close Browser
+
+Vaara kirjautuminen name
+    Open Index Page
+    Input False Name
+    Send Form
+    Page Should Contain    Password field is required.
+    Close Browser
+
+Vaara kirjautuminen pass
+    Open Index Page
+    Input False Password
+    Send Form
+    Page Should Contain    Username field is required.
+    Close Browser
+
+Vaara kirjautuminen ilman kumpaakaan
+    Open Index Page
+    Send Form
+    Page Should Contain    Password field is required.
+    Page Should Contain    Username field is required.
+    Close Browser
+
+Salasanan palautus vaaralla usernamella
+    Open Index Page
+    Click Link    /user/password
+    Input False Name
+    Send Form
+    Wait Until Page Contains    Error message
+    Page Should Contain    Error message
+    Page Should Contain False Username
+    Page Should Contain    is not recognized as a user name or an e-mail address.
+    Close Browser
+
+Tuotteiden testaus Takit flak kuva
+    Open Index Page
+    Click Link    /jackets
+    Wait Until Page Contains Element    productImage0
+    Page Should Contain Image    productImage0
+    Close Browser
+
+Tuotteiden testaus Takit trench kuva
+    Open Index Page
+    Click Link    /jackets
+    Wait Until Page Contains Element    productImage1
+    Page Should Contain Image    productImage1
+    Close Browser
+
+Tuotteiden testaus Housut Daisy Dukes kuva 
+    Open Index Page
+    Click Link    /pants
+    Wait Until Page Contains Element    productImage0
+    Page Should Contain Image    productImage0
+    Close Browser
+
+Tuotteiden testaus Housut Lederhosen kuva
+    Open Index Page
+    Click Link    /pants
+    Wait Until Page Contains Element    productImage1
+    Page Should Contain Image    productImage1
+    Close Browser
+
+Tuotteiden testaus Housut Nantuckets kuva
+    Open Index Page
+    Click Link    /pants
+    Wait Until Page Contains Element    productImage3
+    Page Should Contain Image    productImage3
+    Close Browser
+
+Tuotteiden testaus Housut jeans kuva
+    Open Index Page
+    Click Link    /pants
+    Wait Until Page Contains Element    productImage5
+    Page Should Contain Image    productImage5
+    Close Browser
+
+Tuotteiden testaus Housut shorts kuva
+    Open Index Page
+    Click Link    /pants
+    Wait Until Page Contains Element    productImage6
+    Page Should Contain Image    productImage6
+    Close Browser
+
+Venajan mainosten testaus
+    Open Index Page
+    Click Button    ru
+    Wait Until Page Contains    https://i.imgur.com/fgLzYTb.png
+    Page Should Contain Image    https://i.imgur.com/fgLzYTb.png
+    Page Should Not Contain Image    https://i.imgur.com/ptPEDFK.png
+    Close Browser
+
+Suomen mainosten testaus
+    Open Index Page
+    Click Button    fi
+    Wait Until Page Contains    https://i.imgur.com/ptPEDFK.png
+    Page Should Contain Image    https://i.imgur.com/ptPEDFK.png
+    Page Should Not Contain Image    https://i.imgur.com/fgLzYTb.png
+    Close Browser
