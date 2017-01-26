@@ -12,7 +12,7 @@ Registration
     Close Browser
 
 Register, Login
-    Generate User    ${TEST_USERNAME}    ${TEST_PASSWORD}
+    Generate User
     Open Index Page
     Go To Register Page
     Wait And Check If Page Contains    Registration
