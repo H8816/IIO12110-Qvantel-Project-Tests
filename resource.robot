@@ -29,10 +29,10 @@ ${SUBMIT_LOCATOR}	  op
 *** Keywords ***
 
 Generate User
-    [Arguments]    ${arg1}    ${arg2}
-    ${arg1}=    User Name
-    ${arg2}=    Password
-
+    [Tags]    Faker
+    Comment    Generate Address
+    ${address}=    Address
+    Log To Console    ${address}
 
 Open Index Page
     Open Browser    ${INDEX_URL}    ${BROWSER}
