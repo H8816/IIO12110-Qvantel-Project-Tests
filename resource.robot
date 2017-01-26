@@ -31,8 +31,8 @@ ${SUBMIT_LOCATOR}	  op
 Generate User
     [Tags]    Faker
     Comment    Generate Address
-    ${address}=    Address
-    Log To Console    ${address}
+    ${UserName}=    User Name
+    Log To Console    ${UserName}
 
 Open Index Page
     Open Browser    ${INDEX_URL}    ${BROWSER}
