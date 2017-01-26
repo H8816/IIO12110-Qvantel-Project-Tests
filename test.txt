@@ -68,7 +68,7 @@ Login Test5, Without Credentials
     Go To Login Page
     Wait And Check If Page Contains    Login
     Send Form
-    Wait And Check If Page Contains    The website encountered an unexpected error.
+    Wait And Check If Page Contains    Username or password is invalid!
     Close Browser
 
 Product Test1 Phones, Iphone7
