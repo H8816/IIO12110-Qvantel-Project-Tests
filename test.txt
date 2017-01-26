@@ -1,120 +1,106 @@
 *** Settings ***
 Resource    resource.robot
 Library    Selenium2Library
-
+Library	   FakerLibrary
 *** Test Cases ***
-Testi
-    Open Index Page
 
-Rekisteroityminen
+Registration
     Open Index Page
-    Click Link    /user/register
-    Wait Until Page Contains    Home    
-    Page Should Contain    Home
-    Click Link    /
-    Close Browser
-
-Vaara kirjautuminen name & pass
-    Open Index Page
-    Input False Name
-    Input False Password
+    Go To Register Page
+    Wait And Check If Page Contains    Registration
     Send Form
-    Page Should Contain    Error message
     Close Browser
 
-Vaara kirjautuminen name
+Register, Login
+    Generate User    ${TEST_USERNAME}    ${TEST_PASSWORD}
     Open Index Page
-    Input False Name
+    Go To Register Page
+    Wait And Check If Page Contains    Registration
+    Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
+    Log To Console    ${TEST_USERNAME}
+    Log To Console    ${TEST_PASSWORD}
     Send Form
-    Page Should Contain    Password field is required.
-    Close Browser
-
-Vaara kirjautuminen pass
-    Open Index Page
-    Input False Password
+    Wait And Check If Page Contains    Registration was succesfull.
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
+    Log To Console    ${TEST_USERNAME}
+    Log To Console    ${TEST_PASSWORD}
     Send Form
-    Page Should Contain    Username field is required.
+    Wait And Check If Page Contains    Welcome to Webstore, ${TEST_USERNAME}
     Close Browser
-
-Vaara kirjautuminen ilman kumpaakaan
+Login Test1, Valid Credentials
     Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    asd
     Send Form
-    Page Should Contain    Password field is required.
-    Page Should Contain    Username field is required.
-    Close Browser
+    Close Browser    
 
-Salasanan palautus vaaralla usernamella
+Login Test2, Invalid Credentials
     Open Index Page
-    Click Link    /user/password
-    Input False Name
+    Go To Login Page
+    Input Name And Password    hot    tomale
     Send Form
-    Wait Until Page Contains    Error message
-    Page Should Contain    Error message
-    Page Should Contain False Username
-    Page Should Contain    is not recognized as a user name or an e-mail address.
+    Wait And Check If Page Contains    Username or password is invalid
     Close Browser
 
-Tuotteiden testaus Takit flak kuva
+Login Test3, Invalid Password
     Open Index Page
-    Click Link    /jackets
-    Wait Until Page Contains Element    productImage0
-    Page Should Contain Image    productImage0
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    wrongpassword
+    Send Form
+    Page Should Contain    Username or password is invalid
     Close Browser
 
-Tuotteiden testaus Takit trench kuva
+Login Test4, Invalid Username
     Open Index Page
-    Click Link    /jackets
-    Wait Until Page Contains Element    productImage1
-    Page Should Contain Image    productImage1
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    wronguser    asd
+    Send Form
+    Wait And Check If Page Contains    Username or password is invalid!
     Close Browser
 
-Tuotteiden testaus Housut Daisy Dukes kuva 
+Login Test5, Without Credentials
     Open Index Page
-    Click Link    /pants
-    Wait Until Page Contains Element    productImage0
-    Page Should Contain Image    productImage0
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Send Form
+    Wait And Check If Page Contains    The website encountered an unexpected error.
     Close Browser
 
-Tuotteiden testaus Housut Lederhosen kuva
+Product Test1 Phones, Iphone7
     Open Index Page
-    Click Link    /pants
-    Wait Until Page Contains Element    productImage1
-    Page Should Contain Image    productImage1
+    Go To Phones Page
+    Product Test    productImage0    Iphone 7    1000.5    Nice product
     Close Browser
 
-Tuotteiden testaus Housut Nantuckets kuva
+Product Test2 Phones, Iphone9
     Open Index Page
-    Click Link    /pants
-    Wait Until Page Contains Element    productImage3
-    Page Should Contain Image    productImage3
+    Go To Phones Page
+    Product Test    productImage1    Iphone 9    1000.5    Nice product
     Close Browser
 
-Tuotteiden testaus Housut jeans kuva
+Product Test3 Phones, Cheap Android 
     Open Index Page
-    Click Link    /pants
-    Wait Until Page Contains Element    productImage5
-    Page Should Contain Image    productImage5
+    Go To Phones Page
+    Product Test    productImage2    Cheap Android    10.5    Nice product
     Close Browser
 
-Tuotteiden testaus Housut shorts kuva
+Product Test4 Phones, LessCheapAndroid
     Open Index Page
-    Click Link    /pants
-    Wait Until Page Contains Element    productImage6
-    Page Should Contain Image    productImage6
+    Go To Phones Page
+    Product Test    productImage3    Less Cheap Android    12.5    Nice product
     Close Browser
 
-Venajan mainosten testaus
+AdTest1, Finnish language
     Open Index Page
-    Click Button    ru
-    Wait Until Page Contains    https://i.imgur.com/fgLzYTb.png
-    Page Should Contain Image    https://i.imgur.com/fgLzYTb.png
-    Page Should Not Contain Image    https://i.imgur.com/ptPEDFK.png
+    Commercial Test    fi    adImage    https://i.imgur.com/fgLzYTb.png
     Close Browser
 
-Suomen mainosten testaus
+Rule Engine Test1, High Priority Customer
     Open Index Page
-    Click Button    fi
-    Wait Until Page Contains    https://i.imgur.com/ptPEDFK.png
-    Page Should Contain Image    https://i.imgur.com/ptPEDFK.png
-    Page Should Not Contain Image    https://i.imgur.com/fgLzYTb.png
+    High Priority Customer    /phones    Iphone GOLD    http://elon.ae/oc-content/uploads/1/165_original.jpg
     Close Browser

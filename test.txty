@@ -1,0 +1,117 @@
+*** Settings ***
+Resource    resource.robot
+Library    Selenium2Library
+
+*** Test Cases ***
+
+Testi
+    Open Index Page
+
+Rekisteroityminen
+    Open Index Page
+    Click Link    /registration
+    Wait Until Page Contains    Registration    
+    Page Should Contain    Registration
+    Send Form
+    Close Browser
+
+Kirjautuminen testitunnuksilla
+    Open Index Page
+    Click Link    /login/
+    Page Should Contain    Login
+    Input Text    name    asd
+    Input Text    pass    asd
+    Send Form
+    Close Browser    
+
+Vaara kirjautuminen name & pass
+    Open Index Page
+    Click Link    /login/
+    Page Should Contain    Login
+    Input False Name
+    Input False Password
+    Send Form
+    Page Should Contain    Username or password is invalid
+    Close Browser
+
+Vaara kirjautuminen name
+    Open Index Page
+    Click Link    /login/
+    Page Should Contain    Login
+    Input False Name
+    Send Form
+    Page Should Contain    Username or password is invalid
+    Close Browser
+
+Vaara kirjautuminen pass
+    Open Index Page
+    Click Link    /login/
+    Page Should Contain    Login
+    Input False Password
+    Send Form
+    Page Should Contain    The website encountered an unexpected error.
+    Close Browser
+
+Vaara kirjautuminen ilman kumpaakaan
+    Open Index Page
+    Click Link    /login/
+    Page Should Contain    Login
+    Send Form
+    Page Should Contain    The website encountered an unexpected error.
+    Close Browser
+
+Tuotteiden testausPhones Iphone7 Kuva
+    Open Index Page
+    Click Link    /phones
+    Wait Until Page Contains Element    productImage0
+    Page Should Contain Image    productImage0
+    Close Browser
+
+Tuotteiden testaus Phones Iphone9 Kuva
+    Open Index Page
+    Click Link    /phones
+    Wait Until Page Contains Element    productImage1
+    Page Should Contain Image    productImage1
+    Close Browser
+
+Tuotteiden testaus Phones Cheap Android kuva 
+    Open Index Page
+    Click Link    /phones
+    Wait Until Page Contains Element    productImage2
+    Page Should Contain Image    productImage2
+    Close Browser
+Tuotteiden testaus Phones Less Cheap android kuva
+    Open Index Page
+    Click Link    /phones
+    Wait Until Page Contains Element    productImage3
+    Page Should Contain Image    productImage3
+    Close Browser
+
+Suomen mainosten testaus
+    Open Index Page
+    Click Element    fi
+    Wait Until Page Contains Element    adImage
+    Set Selenium Implicit Wait    10 seconds
+    Page Should Contain Image    https://i.imgur.com/fgLzYTb.png
+    Set Selenium Implicit Wait    1 seconds
+    Close Browser
+
+Venajan mainosten testaus
+    Open Index Page
+    Submit Form    ru
+    Wait Until Page Contains Element    adImage
+    Set Selenium Implicit Wait    10 seconds
+    Page Should Contain Image    https://i.imgur.com/ptPEDFK.png
+    Set Selenium Implicit Wait    1 seconds
+    Close Browser
+
+Tilakoneen testaus High Priority Customer
+    Open Index Page
+    RuleEngine High Priority Customer Testing
+    RuleEngine High Priority Customer Testing
+    RuleEngine High Priority Customer Testing
+    RuleEngine High Priority Customer Testing
+    Click Link    /phones
+    Page Should Contain Image    http://elon.ae/oc-content/uploads/1/165_original.jpg
+    Page Should Contain   Iphone GOLD
+    Close Browser

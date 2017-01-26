@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170124 16:22:24.059" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
+<suite source="/var/lib/jenkins/workspace/robotframework/test.txt" id="s1" name="Test">
+<test id="s1-t1" name="Testi">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:24.144" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:27.418" starttime="20170124 16:22:24.143"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:27.419" starttime="20170124 16:22:24.143"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:27.419" critical="yes" starttime="20170124 16:22:24.143"></status>
+</test>
+<test id="s1-t2" name="Rekisteroityminen">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:27.421" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:30.719" starttime="20170124 16:22:27.421"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:30.719" starttime="20170124 16:22:27.421"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170124 16:22:30.719" level="INFO">Clicking link '/registration'.</msg>
+<status status="PASS" endtime="20170124 16:22:30.757" starttime="20170124 16:22:30.719"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Registration</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:22:30.977" starttime="20170124 16:22:30.758"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Registration</arg>
+</arguments>
+<msg timestamp="20170124 16:22:31.089" level="INFO">Current page contains text 'Registration'.</msg>
+<status status="PASS" endtime="20170124 16:22:31.090" starttime="20170124 16:22:30.977"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:31.091" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:31.121" starttime="20170124 16:22:31.090"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:31.121" starttime="20170124 16:22:31.090"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:31.143" starttime="20170124 16:22:31.121"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:31.143" critical="yes" starttime="20170124 16:22:27.420"></status>
+</test>
+<test id="s1-t3" name="Kirjautuminen testitunnuksilla">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:31.145" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:34.495" starttime="20170124 16:22:31.144"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:34.495" starttime="20170124 16:22:31.144"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.496" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170124 16:22:34.538" starttime="20170124 16:22:34.496"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.826" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170124 16:22:34.827" starttime="20170124 16:22:34.538"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name</arg>
+<arg>asd</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.827" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170124 16:22:34.862" starttime="20170124 16:22:34.827"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>asd</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.863" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170124 16:22:34.892" starttime="20170124 16:22:34.863"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.893" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:34.965" starttime="20170124 16:22:34.893"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:34.965" starttime="20170124 16:22:34.892"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:34.986" starttime="20170124 16:22:34.965"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:34.986" critical="yes" starttime="20170124 16:22:31.143"></status>
+</test>
+<test id="s1-t4" name="Vaara kirjautuminen name &amp; pass">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:34.988" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:38.307" starttime="20170124 16:22:34.988"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:38.308" starttime="20170124 16:22:34.987"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.308" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170124 16:22:38.346" starttime="20170124 16:22:38.308"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.607" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170124 16:22:38.607" starttime="20170124 16:22:38.346"></status>
+</kw>
+<kw name="Input False Name" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${FALSE_USERNAME}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.608" level="INFO">Typing text 'hottomale' into text field 'name'</msg>
+<status status="PASS" endtime="20170124 16:22:38.649" starttime="20170124 16:22:38.607"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:38.649" starttime="20170124 16:22:38.607"></status>
+</kw>
+<kw name="Input False Password" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${FALSE_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.650" level="INFO">Typing text 'hottomale' into text field 'pass'</msg>
+<status status="PASS" endtime="20170124 16:22:38.686" starttime="20170124 16:22:38.650"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:38.686" starttime="20170124 16:22:38.649"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.687" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:38.759" starttime="20170124 16:22:38.686"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:38.759" starttime="20170124 16:22:38.686"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Username or password is invalid</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.874" level="INFO">Current page contains text 'Username or password is invalid'.</msg>
+<status status="PASS" endtime="20170124 16:22:38.874" starttime="20170124 16:22:38.759"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:38.896" starttime="20170124 16:22:38.874"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:38.896" critical="yes" starttime="20170124 16:22:34.987"></status>
+</test>
+<test id="s1-t5" name="Vaara kirjautuminen name">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:38.898" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:42.219" starttime="20170124 16:22:38.898"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:42.220" starttime="20170124 16:22:38.897"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.220" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170124 16:22:42.258" starttime="20170124 16:22:42.220"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.513" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170124 16:22:42.513" starttime="20170124 16:22:42.258"></status>
+</kw>
+<kw name="Input False Name" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${FALSE_USERNAME}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.514" level="INFO">Typing text 'hottomale' into text field 'name'</msg>
+<status status="PASS" endtime="20170124 16:22:42.555" starttime="20170124 16:22:42.514"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:42.555" starttime="20170124 16:22:42.513"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.556" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:42.630" starttime="20170124 16:22:42.556"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:42.630" starttime="20170124 16:22:42.555"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Username or password is invalid</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.745" level="INFO">Current page contains text 'Username or password is invalid'.</msg>
+<status status="PASS" endtime="20170124 16:22:42.745" starttime="20170124 16:22:42.631"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:42.761" starttime="20170124 16:22:42.745"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:42.761" critical="yes" starttime="20170124 16:22:38.897"></status>
+</test>
+<test id="s1-t6" name="Vaara kirjautuminen pass">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:42.763" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:46.032" starttime="20170124 16:22:42.762"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:46.032" starttime="20170124 16:22:42.762"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.033" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170124 16:22:46.074" starttime="20170124 16:22:46.033"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.349" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170124 16:22:46.350" starttime="20170124 16:22:46.074"></status>
+</kw>
+<kw name="Input False Password" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${FALSE_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.350" level="INFO">Typing text 'hottomale' into text field 'pass'</msg>
+<status status="PASS" endtime="20170124 16:22:46.391" starttime="20170124 16:22:46.350"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:46.391" starttime="20170124 16:22:46.350"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.392" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:46.424" starttime="20170124 16:22:46.392"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:46.424" starttime="20170124 16:22:46.391"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>The website encountered an unexpected error.</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.534" level="INFO">Current page contains text 'The website encountered an unexpected error.'.</msg>
+<status status="PASS" endtime="20170124 16:22:46.535" starttime="20170124 16:22:46.424"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:46.553" starttime="20170124 16:22:46.535"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:46.553" critical="yes" starttime="20170124 16:22:42.762"></status>
+</test>
+<test id="s1-t7" name="Vaara kirjautuminen ilman kumpaakaan">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:46.555" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:49.901" starttime="20170124 16:22:46.554"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:49.902" starttime="20170124 16:22:46.554"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170124 16:22:49.902" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170124 16:22:49.942" starttime="20170124 16:22:49.902"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170124 16:22:50.205" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170124 16:22:50.205" starttime="20170124 16:22:49.942"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:50.206" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170124 16:22:50.240" starttime="20170124 16:22:50.206"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:50.240" starttime="20170124 16:22:50.206"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>The website encountered an unexpected error.</arg>
+</arguments>
+<msg timestamp="20170124 16:22:50.353" level="INFO">Current page contains text 'The website encountered an unexpected error.'.</msg>
+<status status="PASS" endtime="20170124 16:22:50.354" starttime="20170124 16:22:50.240"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:50.370" starttime="20170124 16:22:50.354"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:50.370" critical="yes" starttime="20170124 16:22:46.553"></status>
+</test>
+<test id="s1-t8" name="Tuotteiden testausPhones Iphone7 Kuva">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:50.372" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:53.720" starttime="20170124 16:22:50.371"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:53.720" starttime="20170124 16:22:50.371"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:22:53.721" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:22:53.758" starttime="20170124 16:22:53.721"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productImage0</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:22:53.974" starttime="20170124 16:22:53.758"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>productImage0</arg>
+</arguments>
+<msg timestamp="20170124 16:22:53.986" level="INFO">Current page contains image 'productImage0'.</msg>
+<status status="PASS" endtime="20170124 16:22:53.986" starttime="20170124 16:22:53.975"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:54.007" starttime="20170124 16:22:53.986"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:54.007" critical="yes" starttime="20170124 16:22:50.371"></status>
+</test>
+<test id="s1-t9" name="Tuotteiden testaus Phones Iphone9 Kuva">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:54.009" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:22:57.330" starttime="20170124 16:22:54.009"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:57.330" starttime="20170124 16:22:54.008"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:22:57.331" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:22:57.368" starttime="20170124 16:22:57.331"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productImage1</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:22:57.584" starttime="20170124 16:22:57.368"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>productImage1</arg>
+</arguments>
+<msg timestamp="20170124 16:22:57.597" level="INFO">Current page contains image 'productImage1'.</msg>
+<status status="PASS" endtime="20170124 16:22:57.597" starttime="20170124 16:22:57.584"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:22:57.616" starttime="20170124 16:22:57.597"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:22:57.616" critical="yes" starttime="20170124 16:22:54.008"></status>
+</test>
+<test id="s1-t10" name="Tuotteiden testaus Phones Cheap Android kuva">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:22:57.618" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:23:00.977" starttime="20170124 16:22:57.618"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:00.978" starttime="20170124 16:22:57.617"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:00.978" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:01.015" starttime="20170124 16:23:00.978"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productImage2</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:23:01.232" starttime="20170124 16:23:01.015"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>productImage2</arg>
+</arguments>
+<msg timestamp="20170124 16:23:01.244" level="INFO">Current page contains image 'productImage2'.</msg>
+<status status="PASS" endtime="20170124 16:23:01.244" starttime="20170124 16:23:01.232"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:23:01.266" starttime="20170124 16:23:01.245"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:01.266" critical="yes" starttime="20170124 16:22:57.617"></status>
+</test>
+<test id="s1-t11" name="Tuotteiden testaus Phones Less Cheap android kuva">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:23:01.268" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:23:04.618" starttime="20170124 16:23:01.267"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:04.619" starttime="20170124 16:23:01.267"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:04.619" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:04.658" starttime="20170124 16:23:04.619"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productImage3</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:23:04.875" starttime="20170124 16:23:04.658"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>productImage3</arg>
+</arguments>
+<msg timestamp="20170124 16:23:04.887" level="INFO">Current page contains image 'productImage3'.</msg>
+<status status="PASS" endtime="20170124 16:23:04.887" starttime="20170124 16:23:04.875"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170124 16:23:04.905" starttime="20170124 16:23:04.887"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:04.905" critical="yes" starttime="20170124 16:23:01.266"></status>
+</test>
+<test id="s1-t12" name="Suomen mainosten testaus">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:23:04.914" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:23:08.245" starttime="20170124 16:23:04.914"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:08.245" starttime="20170124 16:23:04.913"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170124 16:23:08.246" level="INFO">Clicking button 'ruFlag'.</msg>
+<status status="PASS" endtime="20170124 16:23:08.278" starttime="20170124 16:23:08.246"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>adImage</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:23:08.297" starttime="20170124 16:23:08.278"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>https://i.imgur.com/ptPEDFK.png</arg>
+</arguments>
+<msg timestamp="20170124 16:23:08.313" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js"&gt;&lt;head profile="http://www.w3.org/1999/xhtml/vocab"&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta name="Generator" content="Drupal 7 (http://drupal.org)" /&gt;
+  &lt;title&gt;Welcome to Webstore | Webstore&lt;/title&gt;
+  &lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/modules/system/system.base.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.menus.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.messages.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.theme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/modules/cassie/style-custom.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/modules/cassieregister/custom.css?oka9bb");
+@import url("http://54.237.239.118/modules/comment/comment.css?oka9bb");
+@import url("http://54.237.239.118/modules/field/theme/field.css?oka9bb");
+@import url("http://54.237.239.118/modules/node/node.css?oka9bb");
+@import url("http://54.237.239.118/modules/search/search.css?oka9bb");
+@import url("http://54.237.239.118/modules/user/user.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/layout.css?oka9bb");
+@import url("http://54.237.239.118/themes/bartik/css/style.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/colors.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/cassietheme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="print"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/print.css?oka9bb");
+&lt;/style&gt;
+
+&lt;!--[if lte IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 6]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie6.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+  &lt;script type="text/javascript" src="http://54.237.239.118/misc/jquery.js?v=1.4.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://54.237.239.118/misc/jquery.once.js?v=1.2"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://54.237.239.118/misc/drupal.js?oka9bb"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+&amp;lt;!--//--&amp;gt;&amp;lt;![CDATA[//&amp;gt;&amp;lt;!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cassietheme","theme_token":"o7pZKnNM1_Kwig7hyxL2ne6S4lKMEId4nVypKb_oeN8","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/default\/modules\/cassie\/style-custom.css":1,"sites\/default\/modules\/cassieregister\/custom.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/default\/themes\/cassietheme\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"sites\/default\/themes\/cassietheme\/css\/colors.css":1,"sites\/default\/themes\/cassietheme\/css\/cassietheme.css":1,"sites\/default\/themes\/cassietheme\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}},"urlIsAjaxTrusted":{"\/node?destination=node":true}});
+//--&amp;gt;&amp;lt;!]]&amp;gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="html front not-logged-in one-sidebar sidebar-first page-node"&gt;
+  &lt;div id="skip-link"&gt;
+    &lt;a href="#main-content" class="element-invisible element-focusable"&gt;Skip to main content&lt;/a&gt;
+  &lt;/div&gt;
+    &lt;div id="page-wrapper"&gt;&lt;div id="page"&gt;
+
+  &lt;div id="header" class="without-secondary-menu"&gt;&lt;div class="section clearfix"&gt;
+
+          &lt;a href="/" title="Home" rel="home" id="logo"&gt;
+        &lt;img src="http://54.237.239.118/sites/default/themes/cassietheme/logo.png" style="width: 100px" alt="Home" /&gt;
+      &lt;/a&gt;
+    
+          &lt;div id="name-and-slogan"&gt;
+
+                              &lt;div id="site-name"&gt;
+              &lt;strong&gt;
+                &lt;a href="/" title="Home" rel="home"&gt;&lt;span&gt;Webstore&lt;/span&gt;&lt;/a&gt;
+              &lt;/strong&gt;
+            &lt;/div&gt;
+                  
+        
+      &lt;/div&gt; &lt;!-- /#name-and-slogan --&gt;
+    
+      &lt;div class="region region-header"&gt;
+    &lt;div id="block-cassieregister-logged" class="block block-cassieregister"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;div id="user"&gt;guest&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-cassie-language" class="block block-cassie"&gt;
+
+    &lt;h2 class="element-invisible"&gt;Language&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form method="POST" action=""&gt;&lt;div id="fi"&gt;&lt;input id="fiFlag" class="flags" name="fi" value="" type="submit" /&gt;&lt;/div&gt;&lt;div id="ru"&gt;&lt;input id="ruFlag" class="flags" name="ru" value="" type="submit" /&gt;&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+
+          &lt;div id="main-menu" class="navigation"&gt;
+        &lt;h2 class="element-invisible"&gt;Main menu&lt;/h2&gt;&lt;ul id="main-menu-links" class="links clearfix"&gt;&lt;li class="menu-219 first last active"&gt;&lt;a href="/" class="active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;      &lt;/div&gt; &lt;!-- /#main-menu --&gt;
+    
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#header --&gt;
+
+  
+  
+  &lt;div id="main-wrapper" class="clearfix"&gt;&lt;div id="main" class="clearfix"&gt;
+
+    
+          &lt;div id="sidebar-first" class="column sidebar"&gt;&lt;div class="section"&gt;
+          &lt;div class="region region-sidebar-first"&gt;
+    &lt;div id="block-user-login" class="block block-user"&gt;
+
+    &lt;h2&gt;User login&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form action="/node?destination=node" method="post" id="user-login-form" accept-charset="UTF-8"&gt;&lt;div&gt;&lt;div id="user-login-block-container"&gt;
+
+  &lt;div class="links"&gt;
+    &lt;a href="/login/"&gt;Login&lt;/a&gt;&lt;br /&gt; &lt;a href="/registration"&gt;Register&lt;/a&gt;&lt;br /&gt; &lt;a href="/user/login"&gt;Admin login&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-system-navigation" class="block block-system block-menu"&gt;
+
+    &lt;h2&gt;Navigation&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;ul class="menu clearfix"&gt;&lt;li class="first collapsed"&gt;&lt;a href="/jackets"&gt;Jackets&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/pants"&gt;Pants&lt;/a&gt;&lt;/li&gt;
+&lt;li class="last collapsed"&gt;&lt;a href="/phones"&gt;Phones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-cassie-ad" class="block block-cassie"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;img id="adImage" src="https://i.imgur.com/fgLzYTb.png" /&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#sidebar-first --&gt;
+    
+    &lt;div id="content" class="column"&gt;&lt;div class="section"&gt;
+            &lt;a id="main-content"&gt;&lt;/a&gt;
+                    &lt;h1 class="title" id="page-title"&gt;
+          Welcome to Webstore        &lt;/h1&gt;
+                          &lt;div class="tabs"&gt;
+                  &lt;/div&gt;
+                          &lt;div class="region region-content"&gt;
+    &lt;div id="block-system-main" class="block block-system"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;div id="first-time"&gt;&lt;p&gt;No front page content has been created yet.&lt;/p&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      
+    &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#content --&gt;
+
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /#main, /#main-wrapper --&gt;
+
+  
+  &lt;div id="footer-wrapper"&gt;&lt;div class="section"&gt;
+
+    
+          &lt;div id="footer" class="clearfix"&gt;
+          &lt;div class="region region-footer"&gt;
+    &lt;div id="block-system-powered-by" class="block block-system"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;span&gt;Powered by &lt;a href="https://www.drupal.org"&gt;Drupal&lt;/a&gt;&lt;/span&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt; &lt;!-- /#footer --&gt;
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#footer-wrapper --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- /#page, /#page-wrapper --&gt;
+  
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170124 16:23:08.411" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170124 16:23:08.411" starttime="20170124 16:23:08.313"></status>
+</kw>
+<msg timestamp="20170124 16:23:08.412" level="FAIL">Page should have contained image 'https://i.imgur.com/ptPEDFK.png' but did not</msg>
+<status status="FAIL" endtime="20170124 16:23:08.412" starttime="20170124 16:23:08.297"></status>
+</kw>
+<status status="FAIL" endtime="20170124 16:23:08.412" critical="yes" starttime="20170124 16:23:04.906">Page should have contained image 'https://i.imgur.com/ptPEDFK.png' but did not</status>
+</test>
+<test id="s1-t13" name="Venajan mainosten testaus">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:23:08.414" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:23:11.686" starttime="20170124 16:23:08.413"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:11.686" starttime="20170124 16:23:08.413"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170124 16:23:11.687" level="INFO">Clicking button 'fiFlag'.</msg>
+<status status="PASS" endtime="20170124 16:23:11.727" starttime="20170124 16:23:11.687"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>adImage</arg>
+</arguments>
+<status status="PASS" endtime="20170124 16:23:11.752" starttime="20170124 16:23:11.728"></status>
+</kw>
+<kw name="Page Should Not Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>https://i.imgur.com/ptPEDFK.png</arg>
+</arguments>
+<msg timestamp="20170124 16:23:11.764" level="INFO">Current page does not contain image 'https://i.imgur.com/ptPEDFK.png'.</msg>
+<status status="PASS" endtime="20170124 16:23:11.765" starttime="20170124 16:23:11.752"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>https://i.imgur.com/fgLzYTb.png</arg>
+</arguments>
+<msg timestamp="20170124 16:23:11.807" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"&gt;&lt;head profile="http://www.w3.org/1999/xhtml/vocab"&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta name="Generator" content="Drupal 7 (http://drupal.org)" /&gt;
+  &lt;title&gt;Welcome to Webstore | Webstore&lt;/title&gt;
+  &lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/modules/system/system.base.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.menus.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.messages.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.theme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/modules/cassie/style-custom.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/modules/cassieregister/custom.css?oka9bb");
+@import url("http://54.237.239.118/modules/comment/comment.css?oka9bb");
+@import url("http://54.237.239.118/modules/field/theme/field.css?oka9bb");
+@import url("http://54.237.239.118/modules/node/node.css?oka9bb");
+@import url("http://54.237.239.118/modules/search/search.css?oka9bb");
+@import url("http://54.237.239.118/modules/user/user.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/layout.css?oka9bb");
+@import url("http://54.237.239.118/themes/bartik/css/style.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/colors.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/cassietheme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="print"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/print.css?oka9bb");
+&lt;/style&gt;
+
+&lt;!--[if lte IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 6]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie6.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+  &lt;script type="text/javascript" src="http://54.237.239.118/misc/jquery.js?v=1.4.4"&gt;&lt;/script&gt;&lt;/head&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170124 16:23:11.931" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170124 16:23:11.931" starttime="20170124 16:23:11.808"></status>
+</kw>
+<msg timestamp="20170124 16:23:11.931" level="FAIL">Page should have contained image 'https://i.imgur.com/fgLzYTb.png' but did not</msg>
+<status status="FAIL" endtime="20170124 16:23:11.931" starttime="20170124 16:23:11.765"></status>
+</kw>
+<status status="FAIL" endtime="20170124 16:23:11.932" critical="yes" starttime="20170124 16:23:08.413">Page should have contained image 'https://i.imgur.com/fgLzYTb.png' but did not</status>
+</test>
+<test id="s1-t14" name="Tilakoneen testaus High Priority Customer">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170124 16:23:11.933" level="INFO">Opening browser 'Firefox' to base url 'http://54.237.239.118/'</msg>
+<status status="PASS" endtime="20170124 16:23:15.240" starttime="20170124 16:23:11.933"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:15.240" starttime="20170124 16:23:11.933"></status>
+</kw>
+<kw name="RuleEngine High Priority Customer Testing" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:15.241" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:15.279" starttime="20170124 16:23:15.241"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Iphone GOLD</arg>
+</arguments>
+<msg timestamp="20170124 16:23:15.814" level="INFO">Current page does not contain text 'Iphone GOLD'.</msg>
+<status status="PASS" endtime="20170124 16:23:15.814" starttime="20170124 16:23:15.279"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:15.814" starttime="20170124 16:23:15.241"></status>
+</kw>
+<kw name="RuleEngine High Priority Customer Testing" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:15.815" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:15.854" starttime="20170124 16:23:15.815"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Iphone GOLD</arg>
+</arguments>
+<msg timestamp="20170124 16:23:15.983" level="INFO">Current page does not contain text 'Iphone GOLD'.</msg>
+<status status="PASS" endtime="20170124 16:23:15.983" starttime="20170124 16:23:15.855"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:15.983" starttime="20170124 16:23:15.814"></status>
+</kw>
+<kw name="RuleEngine High Priority Customer Testing" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:15.984" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:16.008" starttime="20170124 16:23:15.984"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Iphone GOLD</arg>
+</arguments>
+<msg timestamp="20170124 16:23:16.127" level="INFO">Current page does not contain text 'Iphone GOLD'.</msg>
+<status status="PASS" endtime="20170124 16:23:16.127" starttime="20170124 16:23:16.008"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:16.127" starttime="20170124 16:23:15.984"></status>
+</kw>
+<kw name="RuleEngine High Priority Customer Testing" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:16.128" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:16.155" starttime="20170124 16:23:16.128"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Iphone GOLD</arg>
+</arguments>
+<msg timestamp="20170124 16:23:16.279" level="INFO">Current page does not contain text 'Iphone GOLD'.</msg>
+<status status="PASS" endtime="20170124 16:23:16.279" starttime="20170124 16:23:16.156"></status>
+</kw>
+<status status="PASS" endtime="20170124 16:23:16.279" starttime="20170124 16:23:16.128"></status>
+</kw>
+<kw name="RuleEngine High Priority Customer Testing" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170124 16:23:16.280" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170124 16:23:16.309" starttime="20170124 16:23:16.280"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Iphone GOLD</arg>
+</arguments>
+<msg timestamp="20170124 16:23:16.929" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js"&gt;&lt;head profile="http://www.w3.org/1999/xhtml/vocab"&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta name="Generator" content="Drupal 7 (http://drupal.org)" /&gt;
+  &lt;title&gt;Phones | Webstore&lt;/title&gt;
+  &lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/modules/system/system.base.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.menus.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.messages.css?oka9bb");
+@import url("http://54.237.239.118/modules/system/system.theme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/modules/cassie/style-custom.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/modules/cassieregister/custom.css?oka9bb");
+@import url("http://54.237.239.118/modules/comment/comment.css?oka9bb");
+@import url("http://54.237.239.118/modules/field/theme/field.css?oka9bb");
+@import url("http://54.237.239.118/modules/node/node.css?oka9bb");
+@import url("http://54.237.239.118/modules/search/search.css?oka9bb");
+@import url("http://54.237.239.118/modules/user/user.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="all"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/layout.css?oka9bb");
+@import url("http://54.237.239.118/themes/bartik/css/style.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/colors.css?oka9bb");
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/cassietheme.css?oka9bb");
+&lt;/style&gt;
+&lt;style type="text/css" media="print"&gt;
+@import url("http://54.237.239.118/sites/default/themes/cassietheme/css/print.css?oka9bb");
+&lt;/style&gt;
+
+&lt;!--[if lte IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 6]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.237.239.118/themes/bartik/css/ie6.css?oka9bb" media="all" /&gt;
+&lt;![endif]--&gt;
+  &lt;script type="text/javascript" src="http://54.237.239.118/misc/jquery.js?v=1.4.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://54.237.239.118/misc/jquery.once.js?v=1.2"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://54.237.239.118/misc/drupal.js?oka9bb"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+&amp;lt;!--//--&amp;gt;&amp;lt;![CDATA[//&amp;gt;&amp;lt;!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cassietheme","theme_token":"rPEpl3ybkG0M5B-V1uGUwV2cJ7pHY25VSxt4bv5Mzjk","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/default\/modules\/cassie\/style-custom.css":1,"sites\/default\/modules\/cassieregister\/custom.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/default\/themes\/cassietheme\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"sites\/default\/themes\/cassietheme\/css\/colors.css":1,"sites\/default\/themes\/cassietheme\/css\/cassietheme.css":1,"sites\/default\/themes\/cassietheme\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}},"urlIsAjaxTrusted":{"\/phones?destination=phones":true}});
+//--&amp;gt;&amp;lt;!]]&amp;gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="html not-front not-logged-in one-sidebar sidebar-first page-phones"&gt;
+  &lt;div id="skip-link"&gt;
+    &lt;a href="#main-content" class="element-invisible element-focusable"&gt;Skip to main content&lt;/a&gt;
+  &lt;/div&gt;
+    &lt;div id="page-wrapper"&gt;&lt;div id="page"&gt;
+
+  &lt;div id="header" class="without-secondary-menu"&gt;&lt;div class="section clearfix"&gt;
+
+          &lt;a href="/" title="Home" rel="home" id="logo"&gt;
+        &lt;img src="http://54.237.239.118/sites/default/themes/cassietheme/logo.png" style="width: 100px" alt="Home" /&gt;
+      &lt;/a&gt;
+    
+          &lt;div id="name-and-slogan"&gt;
+
+                              &lt;div id="site-name"&gt;
+              &lt;strong&gt;
+                &lt;a href="/" title="Home" rel="home"&gt;&lt;span&gt;Webstore&lt;/span&gt;&lt;/a&gt;
+              &lt;/strong&gt;
+            &lt;/div&gt;
+                  
+        
+      &lt;/div&gt; &lt;!-- /#name-and-slogan --&gt;
+    
+      &lt;div class="region region-header"&gt;
+    &lt;div id="block-cassieregister-logged" class="block block-cassieregister"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;div id="user"&gt;guest&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-cassie-language" class="block block-cassie"&gt;
+
+    &lt;h2 class="element-invisible"&gt;Language&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form method="POST" action=""&gt;&lt;div id="fi"&gt;&lt;input id="fiFlag" class="flags" name="fi" value="" type="submit" /&gt;&lt;/div&gt;&lt;div id="ru"&gt;&lt;input id="ruFlag" class="flags" name="ru" value="" type="submit" /&gt;&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+
+          &lt;div id="main-menu" class="navigation"&gt;
+        &lt;h2 class="element-invisible"&gt;Main menu&lt;/h2&gt;&lt;ul id="main-menu-links" class="links clearfix"&gt;&lt;li class="menu-219 first last"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;      &lt;/div&gt; &lt;!-- /#main-menu --&gt;
+    
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#header --&gt;
+
+  
+  
+  &lt;div id="main-wrapper" class="clearfix"&gt;&lt;div id="main" class="clearfix"&gt;
+
+          &lt;div id="breadcrumb"&gt;&lt;h2 class="element-invisible"&gt;You are here&lt;/h2&gt;&lt;div class="breadcrumb"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+    
+          &lt;div id="sidebar-first" class="column sidebar"&gt;&lt;div class="section"&gt;
+          &lt;div class="region region-sidebar-first"&gt;
+    &lt;div id="block-user-login" class="block block-user"&gt;
+
+    &lt;h2&gt;User login&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form action="/phones?destination=phones" method="post" id="user-login-form" accept-charset="UTF-8"&gt;&lt;div&gt;&lt;div id="user-login-block-container"&gt;
+
+  &lt;div class="links"&gt;
+    &lt;a href="/login/"&gt;Login&lt;/a&gt;&lt;br /&gt; &lt;a href="/registration"&gt;Register&lt;/a&gt;&lt;br /&gt; &lt;a href="/user/login"&gt;Admin login&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-system-navigation" class="block block-system block-menu"&gt;
+
+    &lt;h2&gt;Navigation&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;ul class="menu clearfix"&gt;&lt;li class="first collapsed"&gt;&lt;a href="/jackets"&gt;Jackets&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/pants"&gt;Pants&lt;/a&gt;&lt;/li&gt;
+&lt;li class="last collapsed active-trail"&gt;&lt;a href="/phones" class="active-trail active"&gt;Phones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="block-cassie-ad" class="block block-cassie"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;img id="adImage" src="https://i.imgur.com/fgLzYTb.png" /&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#sidebar-first --&gt;
+    
+    &lt;div id="content" class="column"&gt;&lt;div class="section"&gt;
+            &lt;a id="main-content"&gt;&lt;/a&gt;
+                    &lt;h1 class="title" id="page-title"&gt;
+          Phones        &lt;/h1&gt;
+                          &lt;div class="tabs"&gt;
+                  &lt;/div&gt;
+                          &lt;div class="region region-content"&gt;
+    &lt;div id="block-system-main" class="block block-system"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;div&gt;&lt;a href="phones/Iphone%20GOLD"&gt;&lt;div class="productContainer"&gt;&lt;div class="product"&gt;&lt;img id="productImage0" class="productImage" src="http://elon.ae/oc-content/uploads/1/165_original.jpg" /&gt;&lt;p id="productName"&gt;Iphone GOLD&lt;/p&gt;&lt;p id="productPrice"&gt;10000000.5 €&lt;/p&gt;&lt;p id="productDescription"&gt;Nice product&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;a href="phones/Iphone%207"&gt;&lt;div class="productContainer"&gt;&lt;div class="product"&gt;&lt;img id="productImage1" class="productImage" src="http://www.setup2repair.co.uk/resources/images/devices/iPhone-6S-Silver.png" /&gt;&lt;p id="productName"&gt;Iphone 7&lt;/p&gt;&lt;p id="productPrice"&gt;1000.5 €&lt;/p&gt;&lt;p id="productDescription"&gt;Nice product&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;a href="phones/Iphone%209"&gt;&lt;div class="productContainer"&gt;&lt;div class="product"&gt;&lt;img id="productImage2" class="productImage" src="http://www.setup2repair.co.uk/resources/images/devices/iPhone-6S-Silver.png" /&gt;&lt;p id="productName"&gt;Iphone 9&lt;/p&gt;&lt;p id="productPrice"&gt;1000.5 €&lt;/p&gt;&lt;p id="productDescription"&gt;Nice product&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;a href="phones/Cheap%20Android"&gt;&lt;div class="productContainer"&gt;&lt;div class="product"&gt;&lt;img id="productImage3" class="productImage" src="https://www.android.com/static/2016/img/phones/phone-1_1x.jpg" /&gt;&lt;p id="productName"&gt;Cheap Android&lt;/p&gt;&lt;p id="productPrice"&gt;10.5 €&lt;/p&gt;&lt;p id="productDescription"&gt;Nice product&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;a href="phones/Less%20Cheap%20Android"&gt;&lt;div class="productContainer"&gt;&lt;div class="product"&gt;&lt;img id="productImage4" class="productImage" src="https://www.android.com/static/2016/img/phones/phone-1_1x.jpg" /&gt;&lt;p id="productName"&gt;Less Cheap Android&lt;/p&gt;&lt;p id="productPrice"&gt;12.5 €&lt;/p&gt;&lt;p id="productDescription"&gt;Nice product&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      
+    &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#content --&gt;
+
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /#main, /#main-wrapper --&gt;
+
+  
+  &lt;div id="footer-wrapper"&gt;&lt;div class="section"&gt;
+
+    
+          &lt;div id="footer" class="clearfix"&gt;
+          &lt;div class="region region-footer"&gt;
+    &lt;div id="block-system-powered-by" class="block block-system"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;span&gt;Powered by &lt;a href="https://www.drupal.org"&gt;Drupal&lt;/a&gt;&lt;/span&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt; &lt;!-- /#footer --&gt;
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#footer-wrapper --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- /#page, /#page-wrapper --&gt;
+  
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170124 16:23:17.114" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170124 16:23:17.114" starttime="20170124 16:23:16.930"></status>
+</kw>
+<msg timestamp="20170124 16:23:17.115" level="FAIL">Page should not have contained text 'Iphone GOLD'</msg>
+<status status="FAIL" endtime="20170124 16:23:17.115" starttime="20170124 16:23:16.309"></status>
+</kw>
+<status status="FAIL" endtime="20170124 16:23:17.115" starttime="20170124 16:23:16.280"></status>
+</kw>
+<status status="FAIL" endtime="20170124 16:23:17.115" critical="yes" starttime="20170124 16:23:11.932">Page should not have contained text 'Iphone GOLD'</status>
+</test>
+<status status="FAIL" endtime="20170124 16:23:17.117" starttime="20170124 16:22:24.061"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="11">Critical Tests</stat>
+<stat fail="3" pass="11">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Test" pass="11">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
