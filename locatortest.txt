@@ -1,0 +1,15 @@
+*** Settings ***
+Resource    resource.robot
+Library    Selenium2Library
+Library    FakerLibrary
+
+*** Variables ***
+*** Test Cases ***
+Locator
+    Open Index Page
+    Page Should Contain Element    //*[@id='logo']/img
+
+AdTest2, Russian language
+    Open Index Page
+    Commercial Test    ruFlag    fiFlag    adImage    https://i.imgur.com/ptPEDFK.png
+    Close Browser

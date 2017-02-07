@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170202 00:42:16.772" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/contenttest.txt" id="s1" name="Contenttest">
+<test id="s1-t1" name="Navigation Bar Works On Áll Sites">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170202 00:42:16.975" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170202 00:42:19.776" starttime="20170202 00:42:16.975"></status>
+</kw>
+<status status="PASS" endtime="20170202 00:42:19.776" starttime="20170202 00:42:16.975"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170202 00:42:19.782" starttime="20170202 00:42:19.776"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.790" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.790" starttime="20170202 00:42:19.782"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.795" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.796" starttime="20170202 00:42:19.790"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.803" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.803" starttime="20170202 00:42:19.796"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170202 00:42:19.807" starttime="20170202 00:42:19.803"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.813" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.813" starttime="20170202 00:42:19.807"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.819" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.819" starttime="20170202 00:42:19.813"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.824" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.824" starttime="20170202 00:42:19.819"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.824" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.878" starttime="20170202 00:42:19.824"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170202 00:42:19.882" starttime="20170202 00:42:19.878"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.902" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.902" starttime="20170202 00:42:19.882"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.908" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.908" starttime="20170202 00:42:19.902"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.914" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.914" starttime="20170202 00:42:19.908"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170202 00:42:19.920" starttime="20170202 00:42:19.915"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170202 00:42:19.948" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170202 00:42:19.948" starttime="20170202 00:42:19.920"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170202 00:42:20.045" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170202 00:42:20.045" starttime="20170202 00:42:19.948"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170202 00:42:20.050" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170202 00:42:20.050" starttime="20170202 00:42:20.045"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170202 00:42:20.051" level="INFO">Clicking link '/registration'.</msg>
+<status status="PASS" endtime="20170202 00:42:20.093" starttime="20170202 00:42:20.050"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170202 00:42:20.099" starttime="20170202 00:42:20.094"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170202 00:42:20.108" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170202 00:42:20.108" starttime="20170202 00:42:20.099"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170202 00:42:20.218" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;
+&lt;html xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:og="http://ogp.me/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/terms/" xmlns:content="http://purl.org/rss/1.0/modules/content/" dir="ltr" version="XHTML+RDFa 1.0" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="js"&gt;&lt;head profile="http://www.w3.org/1999/xhtml/vocab"&gt;
+  &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+&lt;meta content="Drupal 7 (http://drupal.org)" name="Generator" /&gt;
+&lt;link type="image/vnd.microsoft.icon" href="http://54.89.144.228/sites/default/themes/cassietheme/favicon.ico" rel="shortcut icon" /&gt;
+  &lt;title&gt;Registration | 54.167.103.148&lt;/title&gt;
+  &lt;style media="all" type="text/css"&gt;
+@import url("http://54.89.144.228/modules/system/system.base.css?okn6ii");
+@import url("http://54.89.144.228/modules/system/system.menus.css?okn6ii");
+@import url("http://54.89.144.228/modules/system/system.messages.css?okn6ii");
+@import url("http://54.89.144.228/modules/system/system.theme.css?okn6ii");
+&lt;/style&gt;
+&lt;style media="all" type="text/css"&gt;
+@import url("http://54.89.144.228/sites/default/modules/cassie/style-custom.css?okn6ii");
+@import url("http://54.89.144.228/sites/default/modules/cassieregister/custom.css?okn6ii");
+@import url("http://54.89.144.228/modules/comment/comment.css?okn6ii");
+@import url("http://54.89.144.228/modules/field/theme/field.css?okn6ii");
+@import url("http://54.89.144.228/modules/node/node.css?okn6ii");
+@import url("http://54.89.144.228/modules/search/search.css?okn6ii");
+@import url("http://54.89.144.228/sites/default/modules/shoppingcart/cart.css?okn6ii");
+@import url("http://54.89.144.228/sites/default/modules/shoppingcart/font-awesome.min.css?okn6ii");
+@import url("http://54.89.144.228/modules/user/user.css?okn6ii");
+&lt;/style&gt;
+&lt;link media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css" /&gt;
+&lt;style media="all" type="text/css"&gt;
+@import url("http://54.89.144.228/sites/default/themes/cassietheme/css/layout.css?okn6ii");
+@import url("http://54.89.144.228/themes/bartik/css/style.css?okn6ii");
+@import url("http://54.89.144.228/sites/default/themes/cassietheme/css/colors.css?okn6ii");
+@import url("http://54.89.144.228/sites/default/themes/cassietheme/css/cassietheme.css?okn6ii");
+&lt;/style&gt;
+&lt;style media="print" type="text/css"&gt;
+@import url("http://54.89.144.228/sites/default/themes/cassietheme/css/print.css?okn6ii");
+&lt;/style&gt;
+
+&lt;!--[if lte IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.89.144.228/sites/default/themes/cassietheme/css/ie.css?okn6ii" media="all" /&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 6]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://54.89.144.228/sites/default/themes/cassietheme/css/ie6.css?okn6ii" media="all" /&gt;
+&lt;![endif]--&gt;
+  &lt;script src="http://54.89.144.228/misc/jquery.js?v=1.4.4" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://54.89.144.228/misc/jquery.once.js?v=1.2" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://54.89.144.228/misc/drupal.js?okn6ii" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://54.89.144.228/sites/default/modules/cassie/Timer.js?okn6ii" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+&amp;lt;!--//--&amp;gt;&amp;lt;![CDATA[//&amp;gt;&amp;lt;!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cassietheme","theme_token":"eojFR_TKgAoE7moIgWwYyqh_FBhHl0oQ6E1KBRo05dA","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/default\/modules\/cassie\/Timer.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/default\/modules\/cassie\/style-custom.css":1,"sites\/default\/modules\/cassie\/font-awesome.min.css":1,"sites\/default\/modules\/cassieregister\/custom.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"sites\/default\/modules\/shoppingcart\/cart.css":1,"sites\/default\/modules\/shoppingcart\/font-awesome.min.css":1,"modules\/user\/user.css":1,"\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.1.0\/css\/font-awesome.css":1,"sites\/default\/themes\/cassietheme\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"sites\/default\/themes\/cassietheme\/css\/colors.css":1,"sites\/default\/themes\/cassietheme\/css\/cassietheme.css":1,"sites\/default\/themes\/cassietheme\/css\/print.css":1,"sites\/default\/themes\/cassietheme\/css\/ie.css":1,"sites\/default\/themes\/cassietheme\/css\/ie6.css":1}},"urlIsAjaxTrusted":{"\/registration?destination=registration":true,"\/registration":true}});
+//--&amp;gt;&amp;lt;!]]&amp;gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="html not-front not-logged-in one-sidebar sidebar-first page-registration i18n-en"&gt;
+  &lt;div id="skip-link"&gt;
+    &lt;a class="element-invisible element-focusable" href="#main-content"&gt;Skip to main content&lt;/a&gt;
+  &lt;/div&gt;
+    &lt;div id="page-wrapper"&gt;&lt;div id="page"&gt;
+
+  &lt;div class="without-secondary-menu" id="header"&gt;&lt;div class="section clearfix"&gt;
+
+          &lt;a id="logo" rel="home" title="Home" href="/"&gt;
+        &lt;img alt="Home" style="width: 100px" src="http://54.89.144.228/sites/default/themes/cassietheme/logo.png" /&gt;
+      &lt;/a&gt;
+    
+          &lt;div id="name-and-slogan"&gt;
+
+                              &lt;div id="site-name"&gt;
+              &lt;strong&gt;
+                &lt;a rel="home" title="Home" href="/"&gt;&lt;span&gt;54.167.103.148&lt;/span&gt;&lt;/a&gt;
+              &lt;/strong&gt;
+            &lt;/div&gt;
+                  
+        
+      &lt;/div&gt; &lt;!-- /#name-and-slogan --&gt;
+    
+      &lt;div class="region region-header"&gt;
+    &lt;div class="block block-cassie" id="block-cassie-language"&gt;
+
+    &lt;h2 class="element-invisible"&gt;Language&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form action="" method="POST"&gt;&lt;div id="fi"&gt;&lt;input type="submit" value="" name="fi" class="flags" id="fiFlag" /&gt;&lt;/div&gt;&lt;div id="ru"&gt;&lt;input type="submit" value="" name="ru" class="flags" id="ruFlag" /&gt;&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+
+          &lt;div class="navigation" id="main-menu"&gt;
+        &lt;h2 class="element-invisible"&gt;Main menu&lt;/h2&gt;&lt;ul class="links clearfix" id="main-menu-links"&gt;&lt;li class="menu-219 first last"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;      &lt;/div&gt; &lt;!-- /#main-menu --&gt;
+    
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#header --&gt;
+
+  
+  
+  &lt;div class="clearfix" id="main-wrapper"&gt;&lt;div class="clearfix" id="main"&gt;
+
+          &lt;div id="breadcrumb"&gt;&lt;h2 class="element-invisible"&gt;You are here&lt;/h2&gt;&lt;div class="breadcrumb"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+    
+          &lt;div class="column sidebar" id="sidebar-first"&gt;&lt;div class="section"&gt;
+          &lt;div class="region region-sidebar-first"&gt;
+    &lt;div class="block block-user" id="block-user-login"&gt;
+
+    &lt;h2&gt;User login&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;form accept-charset="UTF-8" id="user-login-form" method="post" action="/registration?destination=registration"&gt;&lt;div&gt;&lt;div id="user-login-block-container"&gt;
+
+  &lt;div class="links"&gt;
+    &lt;a href="/login/"&gt;Login&lt;/a&gt;&lt;br /&gt; &lt;a href="/registration"&gt;Register&lt;/a&gt;&lt;br /&gt; &lt;a href="/user/login"&gt;Admin login&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="block block-system block-menu" id="block-system-navigation"&gt;
+
+    &lt;h2&gt;Navigation&lt;/h2&gt;
+  
+  &lt;div class="content"&gt;
+    &lt;ul class="menu clearfix"&gt;&lt;li class="first collapsed"&gt;&lt;a href="/jackets"&gt;Jackets&lt;/a&gt;&lt;/li&gt;
+&lt;li class="collapsed"&gt;&lt;a href="/pants"&gt;Pants&lt;/a&gt;&lt;/li&gt;
+&lt;li class="last collapsed"&gt;&lt;a href="/phones"&gt;Phones&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="block block-cassie" id="block-cassie-ad"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;img src="https://i.imgur.com/fgLzYTb.png" id="adImage" /&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#sidebar-first --&gt;
+    
+    &lt;div class="column" id="content"&gt;&lt;div class="section"&gt;
+            &lt;a id="main-content"&gt;&lt;/a&gt;
+                    &lt;h1 id="page-title" class="title"&gt;
+          Registration        &lt;/h1&gt;
+                          &lt;div class="tabs"&gt;
+                  &lt;/div&gt;
+                          &lt;div class="region region-content"&gt;
+    &lt;div class="block block-system" id="block-system-main"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;form accept-charset="UTF-8" id="cassieregister-registration-page" method="post" action="/registration"&gt;&lt;div&gt;&lt;div class="form-item form-type-textfield form-item-name"&gt;
+  &lt;label for="edit-name"&gt;Username &lt;/label&gt;
+ &lt;input type="text" maxlength="128" size="60" value="" name="name" id="edit-name" class="hidevaluetext form-text" /&gt;
+&lt;/div&gt;
+&lt;div class="form-item form-type-password form-item-pass"&gt;
+  &lt;label for="edit-pass"&gt;Password &lt;/label&gt;
+ &lt;input type="password" maxlength="128" size="60" name="pass" id="edit-pass" class="hidevaluetext form-text" /&gt;
+&lt;/div&gt;
+&lt;input type="submit" class="form-submit" value="Create a new account" name="op" id="registerButton" /&gt;&lt;input type="hidden" value="form-Eh20i7sphFmt3sTAZLayadKQa5xmPCPORrgNDT41J64" name="form_build_id" /&gt;
+&lt;input type="hidden" value="cassieregister_registration_page" name="form_id" /&gt;
+&lt;/div&gt;&lt;/form&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      
+    &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#content --&gt;
+
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /#main, /#main-wrapper --&gt;
+
+  
+  &lt;div id="footer-wrapper"&gt;&lt;div class="section"&gt;
+
+    
+          &lt;div class="clearfix" id="footer"&gt;
+          &lt;div class="region region-footer"&gt;
+    &lt;div class="block block-system" id="block-system-powered-by"&gt;
+
+    
+  &lt;div class="content"&gt;
+    &lt;span&gt;Powered by &lt;a href="https://www.drupal.org"&gt;Drupal&lt;/a&gt;&lt;/span&gt;  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+      &lt;/div&gt; &lt;!-- /#footer --&gt;
+    
+  &lt;/div&gt;&lt;/div&gt; &lt;!-- /.section, /#footer-wrapper --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- /#page, /#page-wrapper --&gt;
+  
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170202 00:42:20.278" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170202 00:42:20.278" starttime="20170202 00:42:20.218"></status>
+</kw>
+<msg timestamp="20170202 00:42:20.278" level="FAIL">Page should have contained link '/registration' but did not</msg>
+<status status="FAIL" endtime="20170202 00:42:20.278" starttime="20170202 00:42:20.108"></status>
+</kw>
+<status status="FAIL" endtime="20170202 00:42:20.279" critical="yes" starttime="20170202 00:42:16.974">Page should have contained link '/registration' but did not</status>
+</test>
+<status status="FAIL" endtime="20170202 00:42:20.279" starttime="20170202 00:42:16.774"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Contenttest" pass="0">Contenttest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,161 @@
+*** Settings ***
+Resource    resource.robot
+Library    Selenium2Library
+Library	   FakerLibrary
+*** Test Cases ***
+
+Admin Test
+    Open Index Page
+    Go To Admin Login Page
+    Wait And Check If Page Contains    User account
+    Input Name And Password    qmies    qmies
+    Send Form
+    Page Should Contain    qmies
+    Go To Admin Page
+    Wait Until Page Contains Element    page-title
+    Element Should Contain    page-title    Admin UI
+    Close Browser
+    
+Check Shopping Cart
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    asd
+    Send Form
+    Page Should Contain    Hello asd!
+    Logged In User Should Have Shopping Cart    /jackets    /pants    /phones
+    Close Browser
+
+Shopping Cart & Check Out
+    Open Index Page
+    Set Browser Implicit Wait    8 seconds
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    asd
+    Send Form
+    Page Should Contain    Hello asd!
+    Go To Phones Page
+    Wait And Check If Page Contains    Phones
+    Click Image    http://www.setup2repair.co.uk/resources/images/devices/iPhone-6S-Silver.png
+    Wait Until Page Contains Element    addToCart
+    Page Should Contain Element    addToCart
+    Click Button    addToCart
+    Wait until Page Contains Element    count
+    Wait until Element Contains    count    1
+    Element Should Contain    count    1
+    Close Browser
+
+Registration
+    Open Index Page
+    Register New User
+
+Register, Login
+    ${TEST_USERNAME}=    User Name
+    ${TEST_PASSWORD}=    Password
+    Open Index Page
+    Go To Register Page
+    Wait And Check If Page Contains    Registration
+    Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
+    Send Form
+    Wait And Check If Page Contains    Registration was succesfull!
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
+    Send Form
+    Wait And Check If Page Contains    Welcome to Webstore, ${TEST_USERNAME}
+    Close Browser
+
+Login, Logout
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    asd
+    Send Form
+    Page Should Contain    Hello asd!
+    Wait Until Page Contains Element    //div[div/@id='logout']
+    Page Should Contain Element    //div[div/@id='logout']
+    Submit Form    //*[@id='logout']
+    Wait Until Page Contains    Welcome to Webstore
+    Page Should Contain    Welcome to Webstore
+    Close Browser
+
+Login Test1, Valid Credentials
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    asd
+    Send Form
+    Close Browser    
+
+Login Test2, Invalid Credentials
+    Open Index Page
+    Go To Login Page
+    Input Name And Password    hot    tomale
+    Send Form
+    Wait And Check If Page Contains    Username or password is invalid
+    Close Browser
+
+Login Test3, Invalid Password
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    asd    wrongpassword
+    Send Form
+    Page Should Contain    Username or password is invalid
+    Close Browser
+
+Login Test4, Invalid Username
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Input Name And Password    wronguser    asd
+    Send Form
+    Wait And Check If Page Contains    Username or password is invalid!
+    Close Browser
+
+Login Test5, Without Credentials
+    Open Index Page
+    Go To Login Page
+    Wait And Check If Page Contains    Login
+    Send Form
+    Wait And Check If Page Contains    Fill fields first
+    Close Browser
+
+Product Test1 Phones, Iphone7
+    Open Index Page
+    Go To Phones Page
+    Product Test    productImage0    Iphone 7    1000.5    Nice product
+    Close Browser
+
+Product Test2 Phones, Iphone9
+    Open Index Page
+    Go To Phones Page
+    Product Test    productImage1    Iphone 9    1000.5    Nice product
+    Close Browser
+
+Product Test3 Phones, Cheap Android 
+    Open Index Page
+    Go To Phones Page
+    Product Test    productImage2    Cheap Android    10.5    Nice product
+    Close Browser
+
+Product Test4 Phones, LessCheapAndroid
+    Open Index Page
+    Go To Phones Page
+    Product Test    productImage3    Less Cheap Android    12.5    Nice product
+    Close Browser
+
+AdTest1, Finnish language
+    Open Index Page
+    Commercial Test    //div[div/@id='fiFlag']    adImage    fi    https://i.imgur.com/fgLzYTb.png
+    Close Browser
+
+AdTest2, Russian language
+    Open Index Page
+    Commercial Test    //div[div/@id='ruFlag']    adImage    ru    https://i.imgur.com/ptPEDFK.png
+    Close Browser
+
+Rule Engine Test1, High Priority Customer
+    Open Index Page
+    High Priority Customer    /phones    Iphone GOLD    http://elon.ae/oc-content/uploads/1/165_original.jpg
+    Close Browser
