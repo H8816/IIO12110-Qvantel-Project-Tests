@@ -15,6 +15,7 @@ ${PANTS_URL}		http:${HOST}/pants
 ${JACKETS_URL}		http://${HOST}/jackets
 ${MANAGE_URL}		http://${HOST}/manage
 
+${LALA}			lala
 ${BROWSER}        	Firefox
 
 ${USERNAME}	  	asd
