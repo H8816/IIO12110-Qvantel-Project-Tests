@@ -1,0 +1,4195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170206 21:59:01.372" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
+<suite source="/var/lib/jenkins/workspace/robotframework/tests" id="s1" name="Tests">
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/admintest.txt" id="s1-s1" name="Admintest">
+<test id="s1-s1-t1" name="Admin User Can Go To Admin Page">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:01.575" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:04.287" starttime="20170206 21:59:01.575"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:04.287" starttime="20170206 21:59:01.574"></status>
+</kw>
+<kw name="Admin Sign In" library="resource">
+<kw name="Go To Admin Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ADMINLOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:04.288" level="INFO">Opening url 'http://54.89.144.228/user/login'</msg>
+<status status="PASS" endtime="20170206 21:59:04.521" starttime="20170206 21:59:04.288"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:04.521" starttime="20170206 21:59:04.288"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>User account</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:04.528" starttime="20170206 21:59:04.522"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:04.636" level="INFO">Current page contains text 'User account'.</msg>
+<status status="PASS" endtime="20170206 21:59:04.637" starttime="20170206 21:59:04.528"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:04.637" starttime="20170206 21:59:04.522"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${ADMIN_USER}</arg>
+<arg>${ADMIN_PASS}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:04.641" starttime="20170206 21:59:04.637"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:04.641" level="INFO">Typing text 'qmies' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 21:59:04.716" starttime="20170206 21:59:04.641"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:04.720" starttime="20170206 21:59:04.716"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:04.721" level="INFO">Typing text 'hyvadrupalpassu' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 21:59:04.759" starttime="20170206 21:59:04.720"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:04.759" starttime="20170206 21:59:04.637"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:04.763" starttime="20170206 21:59:04.759"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:04.763" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 21:59:04.843" starttime="20170206 21:59:04.763"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:04.843" starttime="20170206 21:59:04.759"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:05.119" starttime="20170206 21:59:04.843"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<msg timestamp="20170206 21:59:05.228" level="INFO">Current page contains text 'qmies'.</msg>
+<status status="PASS" endtime="20170206 21:59:05.228" starttime="20170206 21:59:05.120"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:05.228" starttime="20170206 21:59:04.287"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:05.230" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:05.489" starttime="20170206 21:59:05.229"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:05.490" starttime="20170206 21:59:05.229"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:05.494" starttime="20170206 21:59:05.490"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:05.494" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:05.502" starttime="20170206 21:59:05.494"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:05.502" starttime="20170206 21:59:05.229"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:05.531" starttime="20170206 21:59:05.503"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:05.531" critical="yes" starttime="20170206 21:59:01.574"></status>
+</test>
+<test id="s1-s1-t2" name="Admin User Can Add Content To Webstore">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:05.533" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:08.244" starttime="20170206 21:59:05.533"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:08.245" starttime="20170206 21:59:05.533"></status>
+</kw>
+<kw name="Admin Sign In" library="resource">
+<kw name="Go To Admin Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ADMINLOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:08.246" level="INFO">Opening url 'http://54.89.144.228/user/login'</msg>
+<status status="PASS" endtime="20170206 21:59:08.488" starttime="20170206 21:59:08.246"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:08.488" starttime="20170206 21:59:08.245"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>User account</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:08.494" starttime="20170206 21:59:08.489"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:08.602" level="INFO">Current page contains text 'User account'.</msg>
+<status status="PASS" endtime="20170206 21:59:08.602" starttime="20170206 21:59:08.494"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:08.602" starttime="20170206 21:59:08.488"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${ADMIN_USER}</arg>
+<arg>${ADMIN_PASS}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:08.607" starttime="20170206 21:59:08.603"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:08.607" level="INFO">Typing text 'qmies' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 21:59:08.669" starttime="20170206 21:59:08.607"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:08.673" starttime="20170206 21:59:08.669"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:08.673" level="INFO">Typing text 'hyvadrupalpassu' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 21:59:08.710" starttime="20170206 21:59:08.673"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:08.711" starttime="20170206 21:59:08.602"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:08.714" starttime="20170206 21:59:08.711"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:08.715" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 21:59:08.788" starttime="20170206 21:59:08.714"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:08.788" starttime="20170206 21:59:08.711"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:09.054" starttime="20170206 21:59:08.788"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.163" level="INFO">Current page contains text 'qmies'.</msg>
+<status status="PASS" endtime="20170206 21:59:09.163" starttime="20170206 21:59:09.054"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:09.164" starttime="20170206 21:59:08.245"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.165" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:09.431" starttime="20170206 21:59:09.164"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:09.431" starttime="20170206 21:59:09.164"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:09.435" starttime="20170206 21:59:09.431"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.435" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:09.444" starttime="20170206 21:59:09.435"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:09.444" starttime="20170206 21:59:09.164"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/add</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.444" level="INFO">Clicking link '/add'.</msg>
+<status status="PASS" endtime="20170206 21:59:09.479" starttime="20170206 21:59:09.444"></status>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<doc>:example 'John Doe'</doc>
+<assign>
+<var>${TEST_NAME}</var>
+</assign>
+<msg timestamp="20170206 21:59:09.482" level="INFO">${TEST_NAME} = Marie Howard</msg>
+<status status="PASS" endtime="20170206 21:59:09.482" starttime="20170206 21:59:09.479"></status>
+</kw>
+<kw name="Text" library="FakerLibrary">
+<doc>Generate a text string.</doc>
+<arguments>
+<arg>max_nb_chars=30</arg>
+</arguments>
+<assign>
+<var>${TEST_DESCR}</var>
+</assign>
+<msg timestamp="20170206 21:59:09.483" level="INFO">${TEST_DESCR} = Numquam quae ipsum iste.</msg>
+<status status="PASS" endtime="20170206 21:59:09.483" starttime="20170206 21:59:09.482"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>category</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:09.692" starttime="20170206 21:59:09.483"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>category</arg>
+<arg>${TEST_CATEGORY}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.693" level="INFO">Typing text 'jackets' into text field 'category'</msg>
+<status status="PASS" endtime="20170206 21:59:09.739" starttime="20170206 21:59:09.692"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-product</arg>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.739" level="INFO">Typing text 'Marie Howard' into text field 'edit-product'</msg>
+<status status="PASS" endtime="20170206 21:59:09.777" starttime="20170206 21:59:09.739"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-image-link</arg>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.777" level="INFO">Typing text 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg' into text field 'edit-image-link'</msg>
+<status status="PASS" endtime="20170206 21:59:09.891" starttime="20170206 21:59:09.777"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-amount</arg>
+<arg>${TEST_AMOUNT}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.891" level="INFO">Typing text '19' into text field 'edit-amount'</msg>
+<status status="PASS" endtime="20170206 21:59:09.934" starttime="20170206 21:59:09.891"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-price</arg>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.934" level="INFO">Typing text '69' into text field 'edit-price'</msg>
+<status status="PASS" endtime="20170206 21:59:09.965" starttime="20170206 21:59:09.934"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-description</arg>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:09.965" level="INFO">Typing text 'Numquam quae ipsum iste.' into text field 'edit-description'</msg>
+<status status="PASS" endtime="20170206 21:59:10.010" starttime="20170206 21:59:09.965"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:10.087" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:10.087" starttime="20170206 21:59:10.010"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:10.091" starttime="20170206 21:59:10.087"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<msg timestamp="20170206 21:59:10.091" level="INFO">Clicking button 'addButton'.</msg>
+<status status="PASS" endtime="20170206 21:59:10.138" starttime="20170206 21:59:10.091"></status>
+</kw>
+<kw name="Go To Jackets Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${JACKETS_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:10.139" level="INFO">Opening url 'http://54.89.144.228/jackets'</msg>
+<status status="PASS" endtime="20170206 21:59:10.498" starttime="20170206 21:59:10.138"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:10.498" starttime="20170206 21:59:10.138"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productName</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:10.513" starttime="20170206 21:59:10.498"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:10.521" starttime="20170206 21:59:10.513"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:10.631" level="INFO">Current page contains text 'Marie Howard'.</msg>
+<status status="PASS" endtime="20170206 21:59:10.631" starttime="20170206 21:59:10.521"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:10.638" starttime="20170206 21:59:10.631"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:10.749" level="INFO">Current page contains text 'Numquam quae ipsum iste.'.</msg>
+<status status="PASS" endtime="20170206 21:59:10.749" starttime="20170206 21:59:10.638"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:10.771" level="INFO">Current page contains image 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg'.</msg>
+<status status="PASS" endtime="20170206 21:59:10.771" starttime="20170206 21:59:10.749"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_PRICE} €</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:10.881" starttime="20170206 21:59:10.771"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:11.094" level="INFO">Current page contains text '69'.</msg>
+<status status="PASS" endtime="20170206 21:59:11.094" starttime="20170206 21:59:10.881"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:11.125" starttime="20170206 21:59:11.094"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:11.125" critical="yes" starttime="20170206 21:59:05.532"></status>
+</test>
+<test id="s1-s1-t3" name="Admin User Can Update Content In Webstore">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:11.127" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:13.819" starttime="20170206 21:59:11.127"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:13.819" starttime="20170206 21:59:11.126"></status>
+</kw>
+<kw name="Admin Sign In" library="resource">
+<kw name="Go To Admin Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ADMINLOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:13.821" level="INFO">Opening url 'http://54.89.144.228/user/login'</msg>
+<status status="PASS" endtime="20170206 21:59:14.064" starttime="20170206 21:59:13.820"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:14.064" starttime="20170206 21:59:13.820"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>User account</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:14.070" starttime="20170206 21:59:14.065"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.178" level="INFO">Current page contains text 'User account'.</msg>
+<status status="PASS" endtime="20170206 21:59:14.178" starttime="20170206 21:59:14.070"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:14.178" starttime="20170206 21:59:14.064"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${ADMIN_USER}</arg>
+<arg>${ADMIN_PASS}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:14.182" starttime="20170206 21:59:14.179"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.182" level="INFO">Typing text 'qmies' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 21:59:14.255" starttime="20170206 21:59:14.182"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:14.259" starttime="20170206 21:59:14.255"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.260" level="INFO">Typing text 'hyvadrupalpassu' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 21:59:14.296" starttime="20170206 21:59:14.259"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:14.297" starttime="20170206 21:59:14.178"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:14.300" starttime="20170206 21:59:14.297"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.301" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 21:59:14.376" starttime="20170206 21:59:14.301"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:14.376" starttime="20170206 21:59:14.297"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:14.653" starttime="20170206 21:59:14.377"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.762" level="INFO">Current page contains text 'qmies'.</msg>
+<status status="PASS" endtime="20170206 21:59:14.762" starttime="20170206 21:59:14.653"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:14.762" starttime="20170206 21:59:13.820"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:14.764" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:15.025" starttime="20170206 21:59:14.763"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:15.025" starttime="20170206 21:59:14.762"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:15.029" starttime="20170206 21:59:15.025"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.029" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:15.038" starttime="20170206 21:59:15.029"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:15.038" starttime="20170206 21:59:14.762"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/add</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.038" level="INFO">Clicking link '/add'.</msg>
+<status status="PASS" endtime="20170206 21:59:15.073" starttime="20170206 21:59:15.038"></status>
+</kw>
+<kw name="First Name" library="FakerLibrary">
+<assign>
+<var>${TEST_NAME}</var>
+</assign>
+<msg timestamp="20170206 21:59:15.074" level="INFO">${TEST_NAME} = Heather</msg>
+<status status="PASS" endtime="20170206 21:59:15.074" starttime="20170206 21:59:15.073"></status>
+</kw>
+<kw name="Text" library="FakerLibrary">
+<doc>Generate a text string.</doc>
+<arguments>
+<arg>max_nb_chars=30</arg>
+</arguments>
+<assign>
+<var>${TEST_DESCR}</var>
+</assign>
+<msg timestamp="20170206 21:59:15.075" level="INFO">${TEST_DESCR} = Quasi esse quos laboriosam.</msg>
+<status status="PASS" endtime="20170206 21:59:15.075" starttime="20170206 21:59:15.074"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>category</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:15.287" starttime="20170206 21:59:15.075"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>category</arg>
+<arg>${TEST_CATEGORY}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.287" level="INFO">Typing text 'jackets' into text field 'category'</msg>
+<status status="PASS" endtime="20170206 21:59:15.328" starttime="20170206 21:59:15.287"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-product</arg>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.329" level="INFO">Typing text 'Heather' into text field 'edit-product'</msg>
+<status status="PASS" endtime="20170206 21:59:15.364" starttime="20170206 21:59:15.328"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-image-link</arg>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.365" level="INFO">Typing text 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg' into text field 'edit-image-link'</msg>
+<status status="PASS" endtime="20170206 21:59:15.486" starttime="20170206 21:59:15.364"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-amount</arg>
+<arg>${TEST_AMOUNT}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.487" level="INFO">Typing text '19' into text field 'edit-amount'</msg>
+<status status="PASS" endtime="20170206 21:59:15.520" starttime="20170206 21:59:15.487"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-price</arg>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.521" level="INFO">Typing text '69' into text field 'edit-price'</msg>
+<status status="PASS" endtime="20170206 21:59:15.548" starttime="20170206 21:59:15.520"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-description</arg>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.549" level="INFO">Typing text 'Quasi esse quos laboriosam.' into text field 'edit-description'</msg>
+<status status="PASS" endtime="20170206 21:59:15.593" starttime="20170206 21:59:15.549"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:15.670" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:15.670" starttime="20170206 21:59:15.594"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:15.677" starttime="20170206 21:59:15.671"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.678" level="INFO">Clicking button 'addButton'.</msg>
+<status status="PASS" endtime="20170206 21:59:15.731" starttime="20170206 21:59:15.677"></status>
+</kw>
+<kw name="Go To Jackets Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${JACKETS_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:15.732" level="INFO">Opening url 'http://54.89.144.228/jackets'</msg>
+<status status="PASS" endtime="20170206 21:59:16.084" starttime="20170206 21:59:15.732"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:16.085" starttime="20170206 21:59:15.731"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productName</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:16.100" starttime="20170206 21:59:16.085"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:16.108" starttime="20170206 21:59:16.100"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:16.218" level="INFO">Current page contains text 'Heather'.</msg>
+<status status="PASS" endtime="20170206 21:59:16.219" starttime="20170206 21:59:16.108"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:16.226" starttime="20170206 21:59:16.219"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:16.337" level="INFO">Current page contains text 'Quasi esse quos laboriosam.'.</msg>
+<status status="PASS" endtime="20170206 21:59:16.337" starttime="20170206 21:59:16.226"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:16.360" level="INFO">Current page contains image 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg'.</msg>
+<status status="PASS" endtime="20170206 21:59:16.360" starttime="20170206 21:59:16.337"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_PRICE} €</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:16.478" starttime="20170206 21:59:16.361"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:16.698" level="INFO">Current page contains text '69'.</msg>
+<status status="PASS" endtime="20170206 21:59:16.698" starttime="20170206 21:59:16.479"></status>
+</kw>
+<kw name="Delay" library="resource">
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${arg1} seconds</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:16.699" starttime="20170206 21:59:16.698"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:16.699" starttime="20170206 21:59:16.698"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:16.700" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:17.060" starttime="20170206 21:59:16.700"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:17.060" starttime="20170206 21:59:16.699"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:17.166" starttime="20170206 21:59:17.061"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:17.167" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:17.378" starttime="20170206 21:59:17.166"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:17.379" starttime="20170206 21:59:16.699"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/update</arg>
+</arguments>
+<msg timestamp="20170206 21:59:17.379" level="INFO">Clicking link '/update'.</msg>
+<status status="PASS" endtime="20170206 21:59:17.715" starttime="20170206 21:59:17.379"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:18.005" starttime="20170206 21:59:17.715"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>update${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:18.006" level="INFO">Clicking button 'updateHeather'.</msg>
+<status status="PASS" endtime="20170206 21:59:18.461" starttime="20170206 21:59:18.005"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>edit-amount</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:18.679" starttime="20170206 21:59:18.461"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-amount</arg>
+<arg>${TESTIDADA}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:18.679" level="INFO">Typing text '9001' into text field 'edit-amount'</msg>
+<status status="PASS" endtime="20170206 21:59:19.016" starttime="20170206 21:59:18.679"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>updateProduct</arg>
+</arguments>
+<msg timestamp="20170206 21:59:19.017" level="INFO">Clicking button 'updateProduct'.</msg>
+<status status="PASS" endtime="20170206 21:59:19.358" starttime="20170206 21:59:19.016"></status>
+</kw>
+<kw name="Go To Jackets Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${JACKETS_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:19.359" level="INFO">Opening url 'http://54.89.144.228/jackets'</msg>
+<status status="PASS" endtime="20170206 21:59:19.861" starttime="20170206 21:59:19.359"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:19.861" starttime="20170206 21:59:19.359"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TESTIDADA} €</arg>
+</arguments>
+<msg timestamp="20170206 21:59:20.183" level="INFO">Current page contains text '9001 €'.</msg>
+<status status="PASS" endtime="20170206 21:59:20.183" starttime="20170206 21:59:19.861"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:20.315" starttime="20170206 21:59:20.184"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:20.315" critical="yes" starttime="20170206 21:59:11.125"></status>
+</test>
+<test id="s1-s1-t4" name="Admin User Can Delete Content From Webstore">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:20.317" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:23.342" starttime="20170206 21:59:20.317"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:23.342" starttime="20170206 21:59:20.316"></status>
+</kw>
+<kw name="Admin Sign In" library="resource">
+<kw name="Go To Admin Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ADMINLOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:23.344" level="INFO">Opening url 'http://54.89.144.228/user/login'</msg>
+<status status="PASS" endtime="20170206 21:59:23.681" starttime="20170206 21:59:23.343"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:23.681" starttime="20170206 21:59:23.343"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>User account</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:23.788" starttime="20170206 21:59:23.682"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:24.098" level="INFO">Current page contains text 'User account'.</msg>
+<status status="PASS" endtime="20170206 21:59:24.098" starttime="20170206 21:59:23.789"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:24.098" starttime="20170206 21:59:23.681"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${ADMIN_USER}</arg>
+<arg>${ADMIN_PASS}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:24.203" starttime="20170206 21:59:24.099"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:24.204" level="INFO">Typing text 'qmies' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 21:59:24.582" starttime="20170206 21:59:24.203"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:24.686" starttime="20170206 21:59:24.582"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:24.687" level="INFO">Typing text 'hyvadrupalpassu' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 21:59:25.032" starttime="20170206 21:59:24.686"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:25.032" starttime="20170206 21:59:24.099"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:25.137" starttime="20170206 21:59:25.033"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:25.138" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 21:59:25.480" starttime="20170206 21:59:25.137"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:25.481" starttime="20170206 21:59:25.032"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:25.891" starttime="20170206 21:59:25.481"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>qmies</arg>
+</arguments>
+<msg timestamp="20170206 21:59:26.202" level="INFO">Current page contains text 'qmies'.</msg>
+<status status="PASS" endtime="20170206 21:59:26.203" starttime="20170206 21:59:25.891"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:26.203" starttime="20170206 21:59:23.343"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:26.204" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:26.565" starttime="20170206 21:59:26.204"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:26.565" starttime="20170206 21:59:26.203"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:26.670" starttime="20170206 21:59:26.565"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:26.670" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:26.881" starttime="20170206 21:59:26.670"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:26.881" starttime="20170206 21:59:26.203"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/add</arg>
+</arguments>
+<msg timestamp="20170206 21:59:26.882" level="INFO">Clicking link '/add'.</msg>
+<status status="PASS" endtime="20170206 21:59:27.218" starttime="20170206 21:59:26.882"></status>
+</kw>
+<kw name="First Name" library="FakerLibrary">
+<assign>
+<var>${TEST_NAME}</var>
+</assign>
+<msg timestamp="20170206 21:59:27.219" level="INFO">${TEST_NAME} = Anna</msg>
+<status status="PASS" endtime="20170206 21:59:27.219" starttime="20170206 21:59:27.218"></status>
+</kw>
+<kw name="Text" library="FakerLibrary">
+<doc>Generate a text string.</doc>
+<arguments>
+<arg>max_nb_chars=30</arg>
+</arguments>
+<assign>
+<var>${TEST_DESCR}</var>
+</assign>
+<msg timestamp="20170206 21:59:27.220" level="INFO">${TEST_DESCR} = Velit officiis facere alias.</msg>
+<status status="PASS" endtime="20170206 21:59:27.220" starttime="20170206 21:59:27.219"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>category</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:27.391" starttime="20170206 21:59:27.220"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>category</arg>
+<arg>${TEST_CATEGORY}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:27.391" level="INFO">Typing text 'jackets' into text field 'category'</msg>
+<status status="PASS" endtime="20170206 21:59:27.727" starttime="20170206 21:59:27.391"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-product</arg>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:27.727" level="INFO">Typing text 'Anna' into text field 'edit-product'</msg>
+<status status="PASS" endtime="20170206 21:59:28.061" starttime="20170206 21:59:27.727"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-image-link</arg>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:28.061" level="INFO">Typing text 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg' into text field 'edit-image-link'</msg>
+<status status="PASS" endtime="20170206 21:59:28.490" starttime="20170206 21:59:28.061"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-amount</arg>
+<arg>${TEST_AMOUNT}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:28.491" level="INFO">Typing text '19' into text field 'edit-amount'</msg>
+<status status="PASS" endtime="20170206 21:59:28.822" starttime="20170206 21:59:28.490"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-price</arg>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:28.823" level="INFO">Typing text '69' into text field 'edit-price'</msg>
+<status status="PASS" endtime="20170206 21:59:29.152" starttime="20170206 21:59:28.823"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>edit-description</arg>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:29.153" level="INFO">Typing text 'Velit officiis facere alias.' into text field 'edit-description'</msg>
+<status status="PASS" endtime="20170206 21:59:29.500" starttime="20170206 21:59:29.152"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:29.650" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:29.650" starttime="20170206 21:59:29.501"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:29.755" starttime="20170206 21:59:29.650"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>addButton</arg>
+</arguments>
+<msg timestamp="20170206 21:59:29.755" level="INFO">Clicking button 'addButton'.</msg>
+<status status="PASS" endtime="20170206 21:59:30.104" starttime="20170206 21:59:29.755"></status>
+</kw>
+<kw name="Go To Jackets Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${JACKETS_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:30.105" level="INFO">Opening url 'http://54.89.144.228/jackets'</msg>
+<status status="PASS" endtime="20170206 21:59:30.635" starttime="20170206 21:59:30.104"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:30.636" starttime="20170206 21:59:30.104"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>productName</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:30.752" starttime="20170206 21:59:30.636"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:30.861" starttime="20170206 21:59:30.752"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:31.173" level="INFO">Current page contains text 'Anna'.</msg>
+<status status="PASS" endtime="20170206 21:59:31.173" starttime="20170206 21:59:30.861"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:31.281" starttime="20170206 21:59:31.173"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_DESCR}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:31.605" level="INFO">Current page contains text 'Velit officiis facere alias.'.</msg>
+<status status="PASS" endtime="20170206 21:59:31.605" starttime="20170206 21:59:31.282"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${TEST_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:31.833" level="INFO">Current page contains image 'https://store.thinksai.com/images/clipart/Safety%20First/Warning/Vertical/warnV031%20-%20do%20not%20touch%20under%20test.jpg'.</msg>
+<status status="PASS" endtime="20170206 21:59:31.833" starttime="20170206 21:59:31.606"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_PRICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:32.085" starttime="20170206 21:59:31.833"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${TEST_PRICE} €</arg>
+</arguments>
+<msg timestamp="20170206 21:59:32.478" level="INFO">Current page contains text '69 €'.</msg>
+<status status="PASS" endtime="20170206 21:59:32.478" starttime="20170206 21:59:32.085"></status>
+</kw>
+<kw name="Manage Page Check" library="resource">
+<kw name="Go To Admin Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MANAGE_URL}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:32.479" level="INFO">Opening url 'http://54.89.144.228/manage'</msg>
+<status status="PASS" endtime="20170206 21:59:32.860" starttime="20170206 21:59:32.479"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:32.860" starttime="20170206 21:59:32.479"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>page-title</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:32.966" starttime="20170206 21:59:32.860"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>page-title</arg>
+<arg>Admin UI</arg>
+</arguments>
+<msg timestamp="20170206 21:59:32.967" level="INFO">Verifying element 'page-title' contains text 'Admin UI'.</msg>
+<status status="PASS" endtime="20170206 21:59:33.181" starttime="20170206 21:59:32.967"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:33.181" starttime="20170206 21:59:32.478"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/delete</arg>
+</arguments>
+<msg timestamp="20170206 21:59:33.182" level="INFO">Clicking link '/delete'.</msg>
+<status status="PASS" endtime="20170206 21:59:33.521" starttime="20170206 21:59:33.182"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:33.817" starttime="20170206 21:59:33.521"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>delete${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:33.817" level="INFO">Clicking button 'deleteAnna'.</msg>
+<status status="PASS" endtime="20170206 21:59:34.273" starttime="20170206 21:59:33.817"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:35.211" level="INFO">Current page does not contain text 'Anna'.</msg>
+<status status="PASS" endtime="20170206 21:59:35.212" starttime="20170206 21:59:34.273"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:35.342" starttime="20170206 21:59:35.212"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:35.342" critical="yes" starttime="20170206 21:59:20.316"></status>
+</test>
+<status status="PASS" endtime="20170206 21:59:35.343" starttime="20170206 21:59:01.392"></status>
+</suite>
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/adtest.txt" id="s1-s2" name="Adtest">
+<test id="s1-s2-t1" name="AdTest1, Finnish language">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:35.354" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:38.373" starttime="20170206 21:59:35.353"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:38.374" starttime="20170206 21:59:35.353"></status>
+</kw>
+<kw name="Commercial Test" library="resource">
+<arguments>
+<arg>fiFlag</arg>
+<arg>ruFlag</arg>
+<arg>adImage</arg>
+<arg>https://i.imgur.com/fgLzYTb.png</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:38.480" starttime="20170206 21:59:38.374"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:38.480" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:38.857" starttime="20170206 21:59:38.480"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:38.858" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:39.215" starttime="20170206 21:59:38.857"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:39.216" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:39.565" starttime="20170206 21:59:39.215"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg2}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:39.715" starttime="20170206 21:59:39.566"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg2}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:39.716" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:40.052" starttime="20170206 21:59:39.715"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:40.052" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:40.424" starttime="20170206 21:59:40.052"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:40.424" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:40.781" starttime="20170206 21:59:40.424"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:40.990" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:40.991" starttime="20170206 21:59:40.781"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:41.095" starttime="20170206 21:59:40.991"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:41.096" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:41.428" starttime="20170206 21:59:41.095"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:41.429" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:41.774" starttime="20170206 21:59:41.428"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:41.775" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:42.123" starttime="20170206 21:59:41.775"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:42.324" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:42.324" starttime="20170206 21:59:42.123"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${arg3}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:42.429" starttime="20170206 21:59:42.324"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${arg4}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:42.637" level="INFO">Current page contains image 'https://i.imgur.com/fgLzYTb.png'.</msg>
+<status status="PASS" endtime="20170206 21:59:42.637" starttime="20170206 21:59:42.429"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:42.783" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:42.783" starttime="20170206 21:59:42.637"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:42.784" starttime="20170206 21:59:38.374"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:42.920" starttime="20170206 21:59:42.784"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:42.921" critical="yes" starttime="20170206 21:59:35.352"></status>
+</test>
+<test id="s1-s2-t2" name="AdTest2, Russian language">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:42.922" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:45.909" starttime="20170206 21:59:42.922"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:45.910" starttime="20170206 21:59:42.922"></status>
+</kw>
+<kw name="Commercial Test" library="resource">
+<arguments>
+<arg>ruFlag</arg>
+<arg>fiFlag</arg>
+<arg>adImage</arg>
+<arg>https://i.imgur.com/ptPEDFK.png</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:46.017" starttime="20170206 21:59:45.910"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:46.017" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:46.403" starttime="20170206 21:59:46.017"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:46.403" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:46.793" starttime="20170206 21:59:46.403"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:46.793" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:47.150" starttime="20170206 21:59:46.793"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg2}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:47.292" starttime="20170206 21:59:47.150"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg2}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:47.292" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:47.628" starttime="20170206 21:59:47.292"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:47.628" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:47.981" starttime="20170206 21:59:47.628"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:47.982" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:48.337" starttime="20170206 21:59:47.982"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:48.518" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:48.518" starttime="20170206 21:59:48.337"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:48.623" starttime="20170206 21:59:48.518"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:48.623" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:48.955" starttime="20170206 21:59:48.623"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:48.956" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:49.307" starttime="20170206 21:59:48.955"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="${arg1}"]</arg>
+</arguments>
+<msg timestamp="20170206 21:59:49.308" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
+<status status="PASS" endtime="20170206 21:59:49.656" starttime="20170206 21:59:49.307"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:49.824" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:49.825" starttime="20170206 21:59:49.656"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${arg3}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:49.930" starttime="20170206 21:59:49.825"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${arg4}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:50.137" level="INFO">Current page contains image 'https://i.imgur.com/ptPEDFK.png'.</msg>
+<status status="PASS" endtime="20170206 21:59:50.137" starttime="20170206 21:59:49.930"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:50.281" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:50.281" starttime="20170206 21:59:50.138"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:50.281" starttime="20170206 21:59:45.910"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 21:59:50.414" starttime="20170206 21:59:50.281"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:50.414" critical="yes" starttime="20170206 21:59:42.921"></status>
+</test>
+<status status="PASS" endtime="20170206 21:59:50.415" starttime="20170206 21:59:35.346"></status>
+</suite>
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/contenttest.txt" id="s1-s3" name="Contenttest">
+<test id="s1-s3-t1" name="Navigation Bar Works On Áll Sites">
+<kw name="Delay" library="resource">
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${arg1} seconds</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:50.424" starttime="20170206 21:59:50.424"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:50.424" starttime="20170206 21:59:50.423"></status>
+</kw>
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 21:59:50.425" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 21:59:53.444" starttime="20170206 21:59:50.425"></status>
+</kw>
+<status status="PASS" endtime="20170206 21:59:53.444" starttime="20170206 21:59:50.425"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:53.551" starttime="20170206 21:59:53.445"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 21:59:53.760" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 21:59:53.760" starttime="20170206 21:59:53.552"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 21:59:53.968" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 21:59:53.968" starttime="20170206 21:59:53.760"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 21:59:54.178" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 21:59:54.178" starttime="20170206 21:59:53.968"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:54.283" starttime="20170206 21:59:54.178"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 21:59:54.491" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 21:59:54.492" starttime="20170206 21:59:54.283"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 21:59:54.699" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 21:59:54.699" starttime="20170206 21:59:54.492"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 21:59:54.907" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 21:59:54.907" starttime="20170206 21:59:54.700"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:55.055" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:55.055" starttime="20170206 21:59:54.907"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 21:59:55.056" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170206 21:59:55.420" starttime="20170206 21:59:55.055"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:55.578" starttime="20170206 21:59:55.420"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 21:59:55.785" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 21:59:55.786" starttime="20170206 21:59:55.578"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 21:59:55.993" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 21:59:55.993" starttime="20170206 21:59:55.786"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 21:59:56.200" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 21:59:56.201" starttime="20170206 21:59:55.993"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:56.306" starttime="20170206 21:59:56.201"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 21:59:56.514" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 21:59:56.514" starttime="20170206 21:59:56.306"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 21:59:56.721" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 21:59:56.721" starttime="20170206 21:59:56.514"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 21:59:56.929" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 21:59:56.929" starttime="20170206 21:59:56.722"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:57.074" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:57.075" starttime="20170206 21:59:56.929"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 21:59:57.075" level="INFO">Clicking link '/registration'.</msg>
+<status status="PASS" endtime="20170206 21:59:57.411" starttime="20170206 21:59:57.075"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:57.529" starttime="20170206 21:59:57.411"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 21:59:57.737" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 21:59:57.737" starttime="20170206 21:59:57.530"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 21:59:57.944" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 21:59:57.945" starttime="20170206 21:59:57.737"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 21:59:58.152" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 21:59:58.152" starttime="20170206 21:59:57.945"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:58.258" starttime="20170206 21:59:58.152"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 21:59:58.465" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 21:59:58.465" starttime="20170206 21:59:58.258"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 21:59:58.673" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 21:59:58.673" starttime="20170206 21:59:58.466"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 21:59:58.880" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 21:59:58.881" starttime="20170206 21:59:58.673"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 21:59:59.026" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 21:59:59.027" starttime="20170206 21:59:58.881"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 21:59:59.027" level="INFO">Clicking link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 21:59:59.364" starttime="20170206 21:59:59.027"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 21:59:59.499" starttime="20170206 21:59:59.364"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 21:59:59.707" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 21:59:59.707" starttime="20170206 21:59:59.499"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 21:59:59.914" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 21:59:59.915" starttime="20170206 21:59:59.707"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:00.122" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:00.122" starttime="20170206 21:59:59.915"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:00:00.274" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:00:00.274" starttime="20170206 22:00:00.123"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 22:00:00.274" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:00.609" starttime="20170206 22:00:00.274"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:00.804" starttime="20170206 22:00:00.610"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 22:00:01.012" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 22:00:01.012" starttime="20170206 22:00:00.804"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 22:00:01.220" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:01.221" starttime="20170206 22:00:01.013"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 22:00:01.430" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 22:00:01.430" starttime="20170206 22:00:01.221"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:01.537" starttime="20170206 22:00:01.430"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 22:00:01.745" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:01.745" starttime="20170206 22:00:01.537"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 22:00:01.997" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:01.997" starttime="20170206 22:00:01.745"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:02.246" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:02.247" starttime="20170206 22:00:01.997"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:00:02.411" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:00:02.411" starttime="20170206 22:00:02.247"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 22:00:02.412" level="INFO">Clicking link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:02.775" starttime="20170206 22:00:02.411"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:02.905" starttime="20170206 22:00:02.775"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 22:00:03.113" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 22:00:03.114" starttime="20170206 22:00:02.905"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 22:00:03.325" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:03.325" starttime="20170206 22:00:03.114"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 22:00:03.533" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 22:00:03.533" starttime="20170206 22:00:03.325"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:03.640" starttime="20170206 22:00:03.534"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 22:00:03.848" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:03.848" starttime="20170206 22:00:03.641"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 22:00:04.056" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:04.056" starttime="20170206 22:00:03.849"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:04.264" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:04.264" starttime="20170206 22:00:04.057"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:00:04.410" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:00:04.410" starttime="20170206 22:00:04.265"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:04.410" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:04.747" starttime="20170206 22:00:04.410"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>User login</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:04.890" starttime="20170206 22:00:04.747"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 22:00:05.097" level="INFO">Current page contains link '/login/'.</msg>
+<status status="PASS" endtime="20170206 22:00:05.097" starttime="20170206 22:00:04.890"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 22:00:05.305" level="INFO">Current page contains link '/registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:05.305" starttime="20170206 22:00:05.098"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 22:00:05.513" level="INFO">Current page contains link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 22:00:05.513" starttime="20170206 22:00:05.306"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Navigation</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:05.620" starttime="20170206 22:00:05.514"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 22:00:05.828" level="INFO">Current page contains link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:05.828" starttime="20170206 22:00:05.620"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 22:00:06.038" level="INFO">Current page contains link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:06.038" starttime="20170206 22:00:05.828"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:06.245" level="INFO">Current page contains link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:06.246" starttime="20170206 22:00:06.038"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:00:06.391" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:00:06.391" starttime="20170206 22:00:06.246"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:00:06.520" starttime="20170206 22:00:06.391"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:06.520" critical="yes" starttime="20170206 21:59:50.423"></status>
+</test>
+<test id="s1-s3-t2" name="Language Selection Is Visible">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:06.522" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:09.880" starttime="20170206 22:00:06.522"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:09.880" starttime="20170206 22:00:06.521"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:09.986" starttime="20170206 22:00:09.880"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:10.091" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:10.091" starttime="20170206 22:00:09.986"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:10.196" starttime="20170206 22:00:10.091"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:10.300" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:10.301" starttime="20170206 22:00:10.196"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/login/</arg>
+</arguments>
+<msg timestamp="20170206 22:00:10.301" level="INFO">Clicking link '/login/'.</msg>
+<status status="PASS" endtime="20170206 22:00:10.669" starttime="20170206 22:00:10.301"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:10.824" starttime="20170206 22:00:10.670"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:10.929" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:10.929" starttime="20170206 22:00:10.824"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:11.034" starttime="20170206 22:00:10.929"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:11.139" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:11.139" starttime="20170206 22:00:11.034"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/registration</arg>
+</arguments>
+<msg timestamp="20170206 22:00:11.139" level="INFO">Clicking link '/registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:11.478" starttime="20170206 22:00:11.139"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:11.598" starttime="20170206 22:00:11.479"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:11.702" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:11.702" starttime="20170206 22:00:11.598"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:11.807" starttime="20170206 22:00:11.702"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:11.911" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:11.911" starttime="20170206 22:00:11.807"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/user/login</arg>
+</arguments>
+<msg timestamp="20170206 22:00:11.912" level="INFO">Clicking link '/user/login'.</msg>
+<status status="PASS" endtime="20170206 22:00:12.250" starttime="20170206 22:00:11.911"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:12.385" starttime="20170206 22:00:12.251"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:12.489" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:12.489" starttime="20170206 22:00:12.385"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:12.594" starttime="20170206 22:00:12.490"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:12.698" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:12.699" starttime="20170206 22:00:12.594"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/jackets</arg>
+</arguments>
+<msg timestamp="20170206 22:00:12.699" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:13.034" starttime="20170206 22:00:12.699"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:13.211" starttime="20170206 22:00:13.035"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:13.315" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:13.316" starttime="20170206 22:00:13.211"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:13.420" starttime="20170206 22:00:13.316"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:13.525" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:13.525" starttime="20170206 22:00:13.421"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/pants</arg>
+</arguments>
+<msg timestamp="20170206 22:00:13.526" level="INFO">Clicking link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:13.862" starttime="20170206 22:00:13.526"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:13.984" starttime="20170206 22:00:13.862"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:14.089" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:14.089" starttime="20170206 22:00:13.985"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:14.194" starttime="20170206 22:00:14.089"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:14.298" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:14.298" starttime="20170206 22:00:14.194"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>/phones</arg>
+</arguments>
+<msg timestamp="20170206 22:00:14.298" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:14.631" starttime="20170206 22:00:14.298"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:14.745" starttime="20170206 22:00:14.632"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>fiFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:14.849" level="INFO">Current page contains element 'fiFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:14.849" starttime="20170206 22:00:14.745"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:14.953" starttime="20170206 22:00:14.849"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ruFlag</arg>
+</arguments>
+<msg timestamp="20170206 22:00:15.057" level="INFO">Current page contains element 'ruFlag'.</msg>
+<status status="PASS" endtime="20170206 22:00:15.058" starttime="20170206 22:00:14.953"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:15.058" critical="yes" starttime="20170206 22:00:06.521"></status>
+</test>
+<status status="PASS" endtime="20170206 22:00:15.059" starttime="20170206 21:59:50.417"></status>
+</suite>
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/customerfunctiontest.txt" id="s1-s4" name="Customerfunctiontest">
+<test id="s1-s4-t1" name="Check Shopping Cart">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:15.068" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:18.130" starttime="20170206 22:00:15.067"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:18.131" starttime="20170206 22:00:15.067"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:18.132" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:00:18.468" starttime="20170206 22:00:18.131"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:18.468" starttime="20170206 22:00:18.131"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:18.576" starttime="20170206 22:00:18.469"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:18.887" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:00:18.887" starttime="20170206 22:00:18.576"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:18.887" starttime="20170206 22:00:18.468"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>asd</arg>
+<arg>asd</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:18.992" starttime="20170206 22:00:18.888"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:18.992" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:19.371" starttime="20170206 22:00:18.992"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:19.481" starttime="20170206 22:00:19.372"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:19.482" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:19.821" starttime="20170206 22:00:19.482"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:19.822" starttime="20170206 22:00:18.887"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:19.926" starttime="20170206 22:00:19.822"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:19.927" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:20.269" starttime="20170206 22:00:19.927"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:20.269" starttime="20170206 22:00:19.822"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Hello asd!</arg>
+</arguments>
+<msg timestamp="20170206 22:00:20.605" level="INFO">Current page contains text 'Hello asd!'.</msg>
+<status status="PASS" endtime="20170206 22:00:20.605" starttime="20170206 22:00:20.269"></status>
+</kw>
+<kw name="Logged In User Should have Shopping Cart" library="resource">
+<arguments>
+<arg>/jackets</arg>
+<arg>/pants</arg>
+<arg>/phones</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:20.710" starttime="20170206 22:00:20.605"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:20.815" level="INFO">Current page contains element 'shoppingCartContainer'.</msg>
+<status status="PASS" endtime="20170206 22:00:20.815" starttime="20170206 22:00:20.710"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:20.919" starttime="20170206 22:00:20.815"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:21.024" level="INFO">Current page contains element 'count'.</msg>
+<status status="PASS" endtime="20170206 22:00:21.024" starttime="20170206 22:00:20.920"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Jackets</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:21.130" starttime="20170206 22:00:21.024"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:21.131" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:21.466" starttime="20170206 22:00:21.130"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:21.667" starttime="20170206 22:00:21.466"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:21.772" level="INFO">Current page contains element 'shoppingCartContainer'.</msg>
+<status status="PASS" endtime="20170206 22:00:21.772" starttime="20170206 22:00:21.667"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:21.877" starttime="20170206 22:00:21.772"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:21.982" level="INFO">Current page contains element 'count'.</msg>
+<status status="PASS" endtime="20170206 22:00:21.982" starttime="20170206 22:00:21.877"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Pants</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:22.089" starttime="20170206 22:00:21.982"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:22.090" level="INFO">Clicking link '/pants'.</msg>
+<status status="PASS" endtime="20170206 22:00:22.424" starttime="20170206 22:00:22.089"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:22.548" starttime="20170206 22:00:22.424"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:22.653" level="INFO">Current page contains element 'shoppingCartContainer'.</msg>
+<status status="PASS" endtime="20170206 22:00:22.653" starttime="20170206 22:00:22.548"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:22.757" starttime="20170206 22:00:22.653"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:22.861" level="INFO">Current page contains element 'count'.</msg>
+<status status="PASS" endtime="20170206 22:00:22.862" starttime="20170206 22:00:22.757"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Phones</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:22.969" starttime="20170206 22:00:22.862"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg3}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:22.969" level="INFO">Clicking link '/phones'.</msg>
+<status status="PASS" endtime="20170206 22:00:23.306" starttime="20170206 22:00:22.969"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:23.416" starttime="20170206 22:00:23.306"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${SHOPPINGCART_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:23.520" level="INFO">Current page contains element 'shoppingCartContainer'.</msg>
+<status status="PASS" endtime="20170206 22:00:23.521" starttime="20170206 22:00:23.416"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:23.625" starttime="20170206 22:00:23.521"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${COUNT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:23.729" level="INFO">Current page contains element 'count'.</msg>
+<status status="PASS" endtime="20170206 22:00:23.730" starttime="20170206 22:00:23.625"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:23.730" starttime="20170206 22:00:20.605"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:00:23.860" starttime="20170206 22:00:23.730"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:23.860" critical="yes" starttime="20170206 22:00:15.067"></status>
+</test>
+<test id="s1-s4-t2" name="Shopping Cart &amp; Check Out">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:23.862" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:27.046" starttime="20170206 22:00:23.862"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:27.047" starttime="20170206 22:00:23.861"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>8 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:27.150" starttime="20170206 22:00:27.047"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:27.151" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:00:27.506" starttime="20170206 22:00:27.150"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:27.507" starttime="20170206 22:00:27.150"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:27.614" starttime="20170206 22:00:27.507"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:27.925" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:00:27.925" starttime="20170206 22:00:27.614"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:27.925" starttime="20170206 22:00:27.507"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>asd</arg>
+<arg>asd</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:28.031" starttime="20170206 22:00:27.926"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:28.031" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:28.399" starttime="20170206 22:00:28.031"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:28.504" starttime="20170206 22:00:28.400"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:28.505" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:28.839" starttime="20170206 22:00:28.504"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:28.839" starttime="20170206 22:00:27.925"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:28.944" starttime="20170206 22:00:28.840"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:28.945" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:29.287" starttime="20170206 22:00:28.945"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:29.288" starttime="20170206 22:00:28.840"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Hello asd!</arg>
+</arguments>
+<msg timestamp="20170206 22:00:29.625" level="INFO">Current page contains text 'Hello asd!'.</msg>
+<status status="PASS" endtime="20170206 22:00:29.625" starttime="20170206 22:00:29.288"></status>
+</kw>
+<kw name="Go To Jackets Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${JACKETS_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:29.639" level="INFO">Opening url 'http://54.89.144.228/jackets'</msg>
+<status status="PASS" endtime="20170206 22:00:30.015" starttime="20170206 22:00:29.639"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:30.015" starttime="20170206 22:00:29.625"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Jackets</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:30.124" starttime="20170206 22:00:30.016"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:30.435" level="INFO">Current page contains text 'Jackets'.</msg>
+<status status="PASS" endtime="20170206 22:00:30.435" starttime="20170206 22:00:30.124"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:30.435" starttime="20170206 22:00:30.015"></status>
+</kw>
+<kw name="Click Image" library="Selenium2Library">
+<doc>Clicks an image found by `locator`.</doc>
+<arguments>
+<arg>https://s-media-cache-ak0.pinimg.com/736x/b3/5d/c6/b35dc64be219dd383c5322d2d5203a95.jpg</arg>
+</arguments>
+<msg timestamp="20170206 22:00:30.436" level="INFO">Clicking image 'https://s-media-cache-ak0.pinimg.com/736x/b3/5d/c6/b35dc64be219dd383c5322d2d5203a95.jpg'.</msg>
+<status status="PASS" endtime="20170206 22:00:30.786" starttime="20170206 22:00:30.436"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>addToCart</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:30.920" starttime="20170206 22:00:30.786"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>addToCart</arg>
+</arguments>
+<msg timestamp="20170206 22:00:31.025" level="INFO">Current page contains element 'addToCart'.</msg>
+<status status="PASS" endtime="20170206 22:00:31.025" starttime="20170206 22:00:30.920"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>addToCart</arg>
+</arguments>
+<msg timestamp="20170206 22:00:31.025" level="INFO">Clicking button 'addToCart'.</msg>
+<status status="PASS" endtime="20170206 22:00:39.529" starttime="20170206 22:00:31.025"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>count</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:39.652" starttime="20170206 22:00:39.529"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until given element contains `text`.</doc>
+<arguments>
+<arg>count</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:39.887" starttime="20170206 22:00:39.652"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>count</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170206 22:00:39.888" level="INFO">Verifying element 'count' contains text '1'.</msg>
+<status status="PASS" endtime="20170206 22:00:40.099" starttime="20170206 22:00:39.888"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:00:40.231" starttime="20170206 22:00:40.099"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:40.231" critical="yes" starttime="20170206 22:00:23.861"></status>
+</test>
+<status status="PASS" endtime="20170206 22:00:40.232" starttime="20170206 22:00:15.061"></status>
+</suite>
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/logintest.txt" id="s1-s5" name="Logintest">
+<test id="s1-s5-t1" name="Registration">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:40.241" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:43.233" starttime="20170206 22:00:40.240"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:43.233" starttime="20170206 22:00:40.240"></status>
+</kw>
+<kw name="Register New User" library="resource">
+<kw name="User Name" library="FakerLibrary">
+<assign>
+<var>${TEST_USERNAME}</var>
+</assign>
+<msg timestamp="20170206 22:00:43.236" level="INFO">${TEST_USERNAME} = johnwalker</msg>
+<status status="PASS" endtime="20170206 22:00:43.236" starttime="20170206 22:00:43.234"></status>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<doc>Generates a random password.</doc>
+<assign>
+<var>${TEST_PASSWORD}</var>
+</assign>
+<msg timestamp="20170206 22:00:43.236" level="INFO">${TEST_PASSWORD} = %NE9k3Tq&amp;C</msg>
+<status status="PASS" endtime="20170206 22:00:43.236" starttime="20170206 22:00:43.236"></status>
+</kw>
+<kw name="Go To Register Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTER_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:43.237" level="INFO">Opening url 'http://54.89.144.228/registration'</msg>
+<status status="PASS" endtime="20170206 22:00:43.574" starttime="20170206 22:00:43.237"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:43.574" starttime="20170206 22:00:43.236"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Registration</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:43.680" starttime="20170206 22:00:43.574"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:43.995" level="INFO">Current page contains text 'Registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:43.995" starttime="20170206 22:00:43.681"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:43.995" starttime="20170206 22:00:43.574"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${TEST_USERNAME}</arg>
+<arg>${TEST_PASSWORD}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:44.100" starttime="20170206 22:00:43.996"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:44.101" level="INFO">Typing text 'johnwalker' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:44.486" starttime="20170206 22:00:44.101"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:44.591" starttime="20170206 22:00:44.486"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:44.592" level="INFO">Typing text '%NE9k3Tq&amp;C' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:44.932" starttime="20170206 22:00:44.591"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:44.932" starttime="20170206 22:00:43.996"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:45.037" starttime="20170206 22:00:44.933"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:45.038" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:45.378" starttime="20170206 22:00:45.037"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:45.378" starttime="20170206 22:00:44.933"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:00:45.534" starttime="20170206 22:00:45.379"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:45.534" starttime="20170206 22:00:43.233"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:45.534" critical="yes" starttime="20170206 22:00:40.240"></status>
+</test>
+<test id="s1-s5-t2" name="Register, Login">
+<kw name="User Name" library="FakerLibrary">
+<assign>
+<var>${TEST_USERNAME}</var>
+</assign>
+<msg timestamp="20170206 22:00:45.537" level="INFO">${TEST_USERNAME} = josephromero</msg>
+<status status="PASS" endtime="20170206 22:00:45.537" starttime="20170206 22:00:45.535"></status>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<doc>Generates a random password.</doc>
+<assign>
+<var>${TEST_PASSWORD}</var>
+</assign>
+<msg timestamp="20170206 22:00:45.537" level="INFO">${TEST_PASSWORD} = kFk)$9NvvF</msg>
+<status status="PASS" endtime="20170206 22:00:45.538" starttime="20170206 22:00:45.537"></status>
+</kw>
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:45.539" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:48.529" starttime="20170206 22:00:45.538"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:48.529" starttime="20170206 22:00:45.538"></status>
+</kw>
+<kw name="Go To Register Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTER_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:48.530" level="INFO">Opening url 'http://54.89.144.228/registration'</msg>
+<status status="PASS" endtime="20170206 22:00:48.886" starttime="20170206 22:00:48.530"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:48.886" starttime="20170206 22:00:48.529"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Registration</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:48.993" starttime="20170206 22:00:48.887"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:49.302" level="INFO">Current page contains text 'Registration'.</msg>
+<status status="PASS" endtime="20170206 22:00:49.302" starttime="20170206 22:00:48.993"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:49.303" starttime="20170206 22:00:48.886"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${TEST_USERNAME}</arg>
+<arg>${TEST_PASSWORD}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:49.408" starttime="20170206 22:00:49.303"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:49.408" level="INFO">Typing text 'josephromero' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:49.789" starttime="20170206 22:00:49.408"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:49.893" starttime="20170206 22:00:49.789"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:49.894" level="INFO">Typing text 'kFk)$9NvvF' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:50.233" starttime="20170206 22:00:49.894"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:50.233" starttime="20170206 22:00:49.303"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:50.338" starttime="20170206 22:00:50.234"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:50.339" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:50.680" starttime="20170206 22:00:50.338"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:50.680" starttime="20170206 22:00:50.233"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Registration was succesfull!</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:50.812" starttime="20170206 22:00:50.681"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:51.120" level="INFO">Current page contains text 'Registration was succesfull!'.</msg>
+<status status="PASS" endtime="20170206 22:00:51.120" starttime="20170206 22:00:50.812"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:51.121" starttime="20170206 22:00:50.680"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:51.121" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:00:51.443" starttime="20170206 22:00:51.121"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:51.443" starttime="20170206 22:00:51.121"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:51.552" starttime="20170206 22:00:51.444"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:51.861" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:00:51.862" starttime="20170206 22:00:51.552"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:51.862" starttime="20170206 22:00:51.444"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>${TEST_USERNAME}</arg>
+<arg>${TEST_PASSWORD}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:51.967" starttime="20170206 22:00:51.863"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:51.967" level="INFO">Typing text 'josephromero' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:52.308" starttime="20170206 22:00:51.967"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:52.413" starttime="20170206 22:00:52.308"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:52.414" level="INFO">Typing text 'kFk)$9NvvF' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:52.752" starttime="20170206 22:00:52.413"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:52.753" starttime="20170206 22:00:51.862"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:52.857" starttime="20170206 22:00:52.753"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:52.858" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:53.196" starttime="20170206 22:00:52.858"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:53.197" starttime="20170206 22:00:52.753"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Hello ${TEST_USERNAME}!</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:53.333" starttime="20170206 22:00:53.197"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:53.642" level="INFO">Current page contains text 'Hello josephromero!'.</msg>
+<status status="PASS" endtime="20170206 22:00:53.643" starttime="20170206 22:00:53.334"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:53.643" starttime="20170206 22:00:53.197"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:00:53.790" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:00:53.790" starttime="20170206 22:00:53.643"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:00:53.922" starttime="20170206 22:00:53.790"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:53.923" critical="yes" starttime="20170206 22:00:45.535"></status>
+</test>
+<test id="s1-s5-t3" name="Login, Logout">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:53.924" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:00:56.916" starttime="20170206 22:00:53.924"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:56.916" starttime="20170206 22:00:53.924"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:56.917" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:00:57.254" starttime="20170206 22:00:56.917"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:57.254" starttime="20170206 22:00:56.916"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:57.363" starttime="20170206 22:00:57.255"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:57.673" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:00:57.673" starttime="20170206 22:00:57.363"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:57.673" starttime="20170206 22:00:57.254"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>asd</arg>
+<arg>asd</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:57.778" starttime="20170206 22:00:57.674"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:57.779" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:00:58.144" starttime="20170206 22:00:57.778"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:58.249" starttime="20170206 22:00:58.144"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:58.249" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:00:58.584" starttime="20170206 22:00:58.249"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:58.584" starttime="20170206 22:00:57.674"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:58.689" starttime="20170206 22:00:58.585"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:00:58.690" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:00:59.031" starttime="20170206 22:00:58.689"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:00:59.031" starttime="20170206 22:00:58.584"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Hello asd!</arg>
+</arguments>
+<msg timestamp="20170206 22:00:59.368" level="INFO">Current page contains text 'Hello asd!'.</msg>
+<status status="PASS" endtime="20170206 22:00:59.368" starttime="20170206 22:00:59.032"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:00:59.473" starttime="20170206 22:00:59.369"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<msg timestamp="20170206 22:00:59.578" level="INFO">Current page contains element 'logout'.</msg>
+<status status="PASS" endtime="20170206 22:00:59.578" starttime="20170206 22:00:59.473"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<msg timestamp="20170206 22:00:59.579" level="INFO">Clicking button 'logout'.</msg>
+<status status="PASS" endtime="20170206 22:00:59.905" starttime="20170206 22:00:59.579"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<msg timestamp="20170206 22:00:59.906" level="INFO">Clicking button 'logout'.</msg>
+<status status="PASS" endtime="20170206 22:01:00.232" starttime="20170206 22:00:59.906"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170206 22:01:00.380" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170206 22:01:00.380" starttime="20170206 22:01:00.232"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Welcome to 54.167.103.148</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:00.485" starttime="20170206 22:01:00.380"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Welcome to 54.167.103.148</arg>
+</arguments>
+<msg timestamp="20170206 22:01:00.795" level="INFO">Current page contains text 'Welcome to 54.167.103.148'.</msg>
+<status status="PASS" endtime="20170206 22:01:00.795" starttime="20170206 22:01:00.486"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:00.924" starttime="20170206 22:01:00.795"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:00.925" critical="yes" starttime="20170206 22:00:53.923"></status>
+</test>
+<test id="s1-s5-t4" name="Login Test1, Valid Credentials">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:00.926" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:03.936" starttime="20170206 22:01:00.926"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:03.937" starttime="20170206 22:01:00.926"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:03.938" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:01:04.286" starttime="20170206 22:01:03.937"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:04.286" starttime="20170206 22:01:03.937"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:04.395" starttime="20170206 22:01:04.287"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:04.706" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:01:04.706" starttime="20170206 22:01:04.395"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:04.706" starttime="20170206 22:01:04.286"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>asd</arg>
+<arg>asd</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:04.811" starttime="20170206 22:01:04.707"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:04.812" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:01:05.178" starttime="20170206 22:01:04.811"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:05.283" starttime="20170206 22:01:05.178"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:05.283" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:01:05.618" starttime="20170206 22:01:05.283"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:05.618" starttime="20170206 22:01:04.706"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:05.723" starttime="20170206 22:01:05.619"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:05.724" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:01:06.066" starttime="20170206 22:01:05.724"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:06.066" starttime="20170206 22:01:05.619"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:06.226" starttime="20170206 22:01:06.067"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:06.227" critical="yes" starttime="20170206 22:01:00.925"></status>
+</test>
+<test id="s1-s5-t5" name="Login Test2, Invalid Credentials">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:06.229" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:09.224" starttime="20170206 22:01:06.228"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:09.224" starttime="20170206 22:01:06.228"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:09.226" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:01:09.570" starttime="20170206 22:01:09.225"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:09.571" starttime="20170206 22:01:09.225"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>hot</arg>
+<arg>tomale</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:09.676" starttime="20170206 22:01:09.571"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:09.677" level="INFO">Typing text 'hot' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:01:10.038" starttime="20170206 22:01:09.676"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:10.142" starttime="20170206 22:01:10.038"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:10.143" level="INFO">Typing text 'tomale' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:01:10.498" starttime="20170206 22:01:10.142"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:10.498" starttime="20170206 22:01:09.571"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:10.604" starttime="20170206 22:01:10.499"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:10.605" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:01:10.947" starttime="20170206 22:01:10.604"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:10.947" starttime="20170206 22:01:10.499"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Username or password is invalid</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:11.080" starttime="20170206 22:01:10.948"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:11.389" level="INFO">Current page contains text 'Username or password is invalid'.</msg>
+<status status="PASS" endtime="20170206 22:01:11.390" starttime="20170206 22:01:11.081"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:11.390" starttime="20170206 22:01:10.947"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:11.520" starttime="20170206 22:01:11.390"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:11.520" critical="yes" starttime="20170206 22:01:06.227"></status>
+</test>
+<test id="s1-s5-t6" name="Login Test3, Invalid Password">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:11.522" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:14.494" starttime="20170206 22:01:11.521"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:14.494" starttime="20170206 22:01:11.521"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:14.496" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:01:14.829" starttime="20170206 22:01:14.495"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:14.829" starttime="20170206 22:01:14.495"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:14.936" starttime="20170206 22:01:14.829"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:15.246" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:01:15.247" starttime="20170206 22:01:14.936"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:15.247" starttime="20170206 22:01:14.829"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>asd</arg>
+<arg>wrongpassword</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:15.352" starttime="20170206 22:01:15.247"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:15.352" level="INFO">Typing text 'asd' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:01:15.719" starttime="20170206 22:01:15.352"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:15.824" starttime="20170206 22:01:15.719"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:15.825" level="INFO">Typing text 'wrongpassword' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:01:16.167" starttime="20170206 22:01:15.824"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:16.167" starttime="20170206 22:01:15.247"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:16.272" starttime="20170206 22:01:16.167"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:16.273" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:01:16.614" starttime="20170206 22:01:16.272"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:16.615" starttime="20170206 22:01:16.167"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Username or password is invalid</arg>
+</arguments>
+<msg timestamp="20170206 22:01:16.944" level="INFO">Current page contains text 'Username or password is invalid'.</msg>
+<status status="PASS" endtime="20170206 22:01:16.944" starttime="20170206 22:01:16.615"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:17.074" starttime="20170206 22:01:16.944"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:17.074" critical="yes" starttime="20170206 22:01:11.520"></status>
+</test>
+<test id="s1-s5-t7" name="Login Test4, Invalid Username">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:17.076" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:20.146" starttime="20170206 22:01:17.076"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:20.147" starttime="20170206 22:01:17.075"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:20.148" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:01:20.503" starttime="20170206 22:01:20.148"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:20.504" starttime="20170206 22:01:20.147"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:20.613" starttime="20170206 22:01:20.504"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:20.923" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:01:20.923" starttime="20170206 22:01:20.613"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:20.923" starttime="20170206 22:01:20.504"></status>
+</kw>
+<kw name="Input Name And Password" library="resource">
+<arguments>
+<arg>wronguser</arg>
+<arg>asd</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:21.028" starttime="20170206 22:01:20.924"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:21.029" level="INFO">Typing text 'wronguser' into text field 'name'</msg>
+<status status="PASS" endtime="20170206 22:01:21.409" starttime="20170206 22:01:21.028"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:21.514" starttime="20170206 22:01:21.409"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:21.514" level="INFO">Typing text 'asd' into text field 'pass'</msg>
+<status status="PASS" endtime="20170206 22:01:21.850" starttime="20170206 22:01:21.514"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:21.850" starttime="20170206 22:01:20.923"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:21.955" starttime="20170206 22:01:21.851"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:21.956" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:01:22.297" starttime="20170206 22:01:21.955"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:22.297" starttime="20170206 22:01:21.850"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Username or password is invalid!</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:22.430" starttime="20170206 22:01:22.298"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:22.740" level="INFO">Current page contains text 'Username or password is invalid!'.</msg>
+<status status="PASS" endtime="20170206 22:01:22.740" starttime="20170206 22:01:22.431"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:22.741" starttime="20170206 22:01:22.298"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:22.869" starttime="20170206 22:01:22.741"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:22.870" critical="yes" starttime="20170206 22:01:17.075"></status>
+</test>
+<test id="s1-s5-t8" name="Login Test5, Without Credentials">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:22.871" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:25.908" starttime="20170206 22:01:22.871"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:25.908" starttime="20170206 22:01:22.871"></status>
+</kw>
+<kw name="Go To Login Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:25.909" level="INFO">Opening url 'http://54.89.144.228/login'</msg>
+<status status="PASS" endtime="20170206 22:01:26.245" starttime="20170206 22:01:25.909"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:26.245" starttime="20170206 22:01:25.908"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Login</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:26.353" starttime="20170206 22:01:26.246"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:26.663" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" endtime="20170206 22:01:26.663" starttime="20170206 22:01:26.353"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:26.663" starttime="20170206 22:01:26.245"></status>
+</kw>
+<kw name="Send Form" library="resource">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:26.768" starttime="20170206 22:01:26.664"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMIT_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:26.769" level="INFO">Clicking button 'op'.</msg>
+<status status="PASS" endtime="20170206 22:01:27.143" starttime="20170206 22:01:26.768"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:27.143" starttime="20170206 22:01:26.663"></status>
+</kw>
+<kw name="Wait And Check If Page Contains" library="resource">
+<arguments>
+<arg>Fill fields first</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:27.277" starttime="20170206 22:01:27.144"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:27.587" level="INFO">Current page contains text 'Fill fields first'.</msg>
+<status status="PASS" endtime="20170206 22:01:27.587" starttime="20170206 22:01:27.278"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:27.587" starttime="20170206 22:01:27.143"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:27.722" starttime="20170206 22:01:27.587"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:27.722" critical="yes" starttime="20170206 22:01:22.870"></status>
+</test>
+<status status="PASS" endtime="20170206 22:01:27.723" starttime="20170206 22:00:40.234"></status>
+</suite>
+<suite source="/var/lib/jenkins/workspace/robotframework/tests/ruleenginetest.txt" id="s1-s6" name="Ruleenginetest">
+<test id="s1-s6-t1" name="Rule Engine Test1, High Priority Customer">
+<kw name="Open Index Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${INDEX_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:27.735" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
+<status status="PASS" endtime="20170206 22:01:30.738" starttime="20170206 22:01:27.735"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:30.738" starttime="20170206 22:01:27.734"></status>
+</kw>
+<kw name="Delay" library="resource">
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${arg1} seconds</arg>
+</arguments>
+<status status="PASS" endtime="20170206 22:01:30.739" starttime="20170206 22:01:30.739"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:30.739" starttime="20170206 22:01:30.738"></status>
+</kw>
+<kw name="High Priority Customer" library="resource">
+<arguments>
+<arg>/jackets</arg>
+<arg>High priority Product</arg>
+<arg>http://d2fzf9bbqh0om5.cloudfront.net/images/119262/search/jacket_ss2132_h_color_black_jackets_2.jpg?1394005782</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:30.740" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:01:31.093" starttime="20170206 22:01:30.740"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:31.607" level="INFO">Current page does not contain text 'High priority Product'.</msg>
+<status status="PASS" endtime="20170206 22:01:31.607" starttime="20170206 22:01:31.096"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:31.608" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:01:31.947" starttime="20170206 22:01:31.608"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:32.419" level="INFO">Current page does not contain text 'High priority Product'.</msg>
+<status status="PASS" endtime="20170206 22:01:32.419" starttime="20170206 22:01:31.947"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:32.420" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:01:32.755" starttime="20170206 22:01:32.419"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:33.224" level="INFO">Current page does not contain text 'High priority Product'.</msg>
+<status status="PASS" endtime="20170206 22:01:33.225" starttime="20170206 22:01:32.756"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:33.225" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:01:33.563" starttime="20170206 22:01:33.225"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:34.027" level="INFO">Current page does not contain text 'High priority Product'.</msg>
+<status status="PASS" endtime="20170206 22:01:34.027" starttime="20170206 22:01:33.563"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:34.027" level="INFO">Clicking link '/jackets'.</msg>
+<status status="PASS" endtime="20170206 22:01:34.364" starttime="20170206 22:01:34.027"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:35.361" level="INFO">Current page contains text 'High priority Product'.</msg>
+<status status="PASS" endtime="20170206 22:01:35.362" starttime="20170206 22:01:34.365"></status>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<doc>Verifies image identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${arg3}</arg>
+</arguments>
+<msg timestamp="20170206 22:01:35.570" level="INFO">Current page contains image 'http://d2fzf9bbqh0om5.cloudfront.net/images/119262/search/jacket_ss2132_h_color_black_jackets_2.jpg?1394005782'.</msg>
+<status status="PASS" endtime="20170206 22:01:35.570" starttime="20170206 22:01:35.362"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:35.570" starttime="20170206 22:01:30.740"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170206 22:01:35.699" starttime="20170206 22:01:35.570"></status>
+</kw>
+<status status="PASS" endtime="20170206 22:01:35.699" critical="yes" starttime="20170206 22:01:27.734"></status>
+</test>
+<status status="PASS" endtime="20170206 22:01:35.700" starttime="20170206 22:01:27.728"></status>
+</suite>
+<status status="PASS" endtime="20170206 22:01:35.703" starttime="20170206 21:59:01.373"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="19">Critical Tests</stat>
+<stat fail="0" pass="19">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="19">Tests</stat>
+<stat fail="0" id="s1-s1" name="Admintest" pass="4">Tests.Admintest</stat>
+<stat fail="0" id="s1-s2" name="Adtest" pass="2">Tests.Adtest</stat>
+<stat fail="0" id="s1-s3" name="Contenttest" pass="2">Tests.Contenttest</stat>
+<stat fail="0" id="s1-s4" name="Customerfunctiontest" pass="2">Tests.Customerfunctiontest</stat>
+<stat fail="0" id="s1-s5" name="Logintest" pass="8">Tests.Logintest</stat>
+<stat fail="0" id="s1-s6" name="Ruleenginetest" pass="1">Tests.Ruleenginetest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
