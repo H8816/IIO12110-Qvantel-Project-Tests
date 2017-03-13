@@ -81,3 +81,6 @@ Admin User Can Add, Update And Delete Content To Webstore
     Click Button    deleteUPDATE_DEBUG
     Close Browser
 
+ASD
+    Open Index Page
+    Close Browser
