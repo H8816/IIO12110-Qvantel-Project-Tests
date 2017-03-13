@@ -51,7 +51,7 @@ Register New User
     ${TEST_USERNAME}=    User Name
     ${TEST_PASSWORD}=    Password
     Go To Register Page
-    Wait And Check If Page Contains    Registration
+    Wait And Check If Page Contains    Rekisteröidy
     Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
     Send Form
     Close Browser
@@ -63,21 +63,21 @@ Logged In User Should have Shopping Cart
     Page Should Contain Element    ${SHOPPINGCART_LOCATOR}
     Wait Until Page Contains Element    ${COUNT_LOCATOR}
     Page Should Contain Element    ${COUNT_LOCATOR}
-    Wait Until Page Contains    Jackets
+    Wait Until Page Contains    Takit
     Click Link    ${arg1}
 
     Wait Until Page Contains Element    ${SHOPPINGCART_LOCATOR}
     Page Should Contain Element    ${SHOPPINGCART_LOCATOR}
     Wait Until Page Contains Element    ${COUNT_LOCATOR}
     Page Should Contain Element    ${COUNT_LOCATOR}
-    Wait Until Page Contains    Pants
+    Wait Until Page Contains    Housut
     Click Link    ${arg2}
 
     Wait Until Page Contains Element    ${SHOPPINGCART_LOCATOR}
     Page Should Contain Element    ${SHOPPINGCART_LOCATOR}
     Wait Until Page Contains Element    ${COUNT_LOCATOR}
     Page Should Contain Element    ${COUNT_LOCATOR}
-    Wait Until Page Contains    Phones
+    Wait Until Page Contains    Puhelimet
     Click Link    ${arg3}
 
     Wait Until Page Contains Element    ${SHOPPINGCART_LOCATOR}
@@ -99,6 +99,8 @@ Go To Register Page
 Go To Login Page
     Go To    ${LOGIN_URL}
 
+Go To Pants Page
+    Go To    ${PANTS_URL}
 Go To Phones Page
     Go To    ${PHONES_URL}
 
@@ -191,7 +193,7 @@ Admin Add Content To Jackets
     Open Index Page
     Go To Admin Login Page
     Wait And Check If Page Contains    User account
-    Input Name And Password    qmies    hyvadrupalpassu
+    Input Name And Password    ${ADMIN_USER}    ${ADMIN_PASS}
     Send Form
     Page Should Contain    qmies
     Go To Admin Page
@@ -199,6 +201,7 @@ Admin Add Content To Jackets
 
 Admin Sign In
     Go To Admin Login Page
+    Capture Page Screenshot
     Wait And Check If Page Contains    User account
     Input Name And Password    ${ADMIN_USER}    ${ADMIN_PASS}
     Send Form

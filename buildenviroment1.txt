@@ -1,0 +1,27 @@
+*** Settings ***
+Library         Selenium2Library
+
+*** Keywords ***
+
+*** Testcases ***
+
+Build
+    Set Selenium Speed    2 seconds
+    Open Browser    http://54.89.144.228    Firefox
+    Click Link    /user/login
+    Wait Until Page Contains    User account
+    Input Text    edit-name    qmies
+    Input Text    edit-pass    hyvadrupalpassu
+    Click Button    edit-submit
+    Wait Until Page Contains    qmies
+    Click Link    toolbar-link-admin-modules
+    Capture Page Screenshot
+    Select Frame    //*[@class='overlay-element overlay-active']
+    Select Checkbox    //*[@id='edit-modules-other-cassie-enable']
+    Select Checkbox    //*[@id='edit-modules-other-cassieregister-enable']
+    Select Checkbox    //*[@id='edit-modules-other-shoppingcart-enable']
+    Click Button    edit-submit
+    Close Browser
+
+
+

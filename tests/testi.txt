@@ -1,0 +1,77 @@
+*** Settings ***
+Resource	resource.robot
+Library		Selenium2Library
+Library		FakerLibrary
+
+*** Keywords ***
+
+*** Testcases ***
+French Clients Get Russian Products Offered First
+    Open Index Page
+    Go To    http://fr2.gsr.awhoer.net
+    Capture Page Screenshot    asd
+    Input Text    wprx-urltext    http://34.200.105.74/
+    Capture Page Screenshot
+    Set Selenium Speed    5 seconds
+    Click Element    //*[@class='wprx-button']
+    Capture Page Screenshot
+    Click Element    wprx-hideme
+    Click Link    /phones
+    Capture Page Screenshot
+    Click Element    productImage0
+    Capture Page Screenshot
+    Page Should Contain    US_DEBUG
+    Close Browser
+
+Russian Clients Get French Products Offered First
+    Open Index Page
+    Go To    http://ru3.gsr.awhoer.net
+    Capture Page Screenshot    asd
+    Input Text    wprx-urltext    http://34.200.105.74/
+    Capture Page Screenshot
+    Set Selenium Speed    5 seconds
+    Click Element    //*[@class='wprx-button']
+    Capture Page Screenshot
+    Click Element    wprx-hideme
+    Click Link    /phones
+    Capture Page Screenshot
+    Click Element    productImage1
+    Capture Page Screenshot
+    Page Should Contain    RUSSIA_DEBUG
+    Close Browser
+
+Location Ads, France
+    Open Index Page
+    Go To    http://fr2.gsr.awhoer.net
+    Capture Page Screenshot    asd
+    Input Text    wprx-urltext    http://34.200.105.74/
+    Capture Page Screenshot
+    Set Selenium Speed    5 seconds
+    Click Element    //*[@class='wprx-button']
+    Capture Page Screenshot
+    Click Element    wprx-hideme
+    Page Should Contain Image    http://student.labranet.jamk.fi/~H8951/images/french_jacket.jpg
+    Capture Page Screenshot
+    Close Browser
+
+Location Ads, Russia
+    Open Index Page
+    Go To    http://ru3.gsr.awhoer.net
+    Capture Page Screenshot
+    Input Text    wprx-urltext    http://34.200.105.74/
+    Capture Page Screenshot
+    Set Selenium Speed    5 seconds
+    Click Element    //*[@class='wprx-button']
+    Capture Page Screenshot
+    Click Element    wprx-hideme
+    Page Should Contain Image    http://student.labranet.jamk.fi/~H8951/images/jacket_ad.jpg
+    Capture Page Screenshot
+    Close Browser
+
+Language Russian Test
+    Open Index Page
+    Click Button    ruFlag
+    Click Button    ruFlag
+    Capture Page Screenshot
+    Page Should Contain    Содержимое главной страницы еще не создано.
+    Close Browser

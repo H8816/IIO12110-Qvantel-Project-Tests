@@ -1,124 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170201 12:31:17.537" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
-<suite source="/var/lib/jenkins/workspace/robotframework/locatortest.txt" id="s1" name="Locatortest">
-<test id="s1-t1" name="Locator">
-<kw name="Open Index Page" library="resource">
+<robot generated="20170213 09:15:12.555" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
+<suite source="/var/lib/jenkins/workspace/robotframework/buildenviroment.txt" id="s1" name="Buildenviroment">
+<test id="s1-t1" name="Build">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>${INDEX_URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>http://54.89.144.228</arg>
+<arg>Firefox</arg>
 </arguments>
-<msg timestamp="20170201 12:31:17.760" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
-<status status="PASS" endtime="20170201 12:31:21.104" starttime="20170201 12:31:17.759"></status>
-</kw>
-<status status="PASS" endtime="20170201 12:31:21.106" starttime="20170201 12:31:17.759"></status>
-</kw>
-<kw name="Page Should Contain Element" library="Selenium2Library">
-<doc>Verifies element identified by `locator` is found on the current page.</doc>
-<arguments>
-<arg>//*[@id='logo']/img</arg>
-</arguments>
-<msg timestamp="20170201 12:31:21.113" level="INFO">Current page contains element '//*[@id='logo']/img'.</msg>
-<status status="PASS" endtime="20170201 12:31:21.113" starttime="20170201 12:31:21.107"></status>
-</kw>
-<status status="PASS" endtime="20170201 12:31:21.113" critical="yes" starttime="20170201 12:31:17.758"></status>
-</test>
-<test id="s1-t2" name="AdTest2, Russian language">
-<kw name="Open Index Page" library="resource">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>${INDEX_URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170201 12:31:21.117" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228/'</msg>
-<status status="PASS" endtime="20170201 12:31:51.894" starttime="20170201 12:31:21.117"></status>
-</kw>
-<status status="PASS" endtime="20170201 12:31:51.911" starttime="20170201 12:31:21.117"></status>
-</kw>
-<kw name="Commercial Test" library="resource">
-<arguments>
-<arg>ruFlag</arg>
-<arg>fiFlag</arg>
-<arg>adImage</arg>
-<arg>https://i.imgur.com/ptPEDFK.png</arg>
-</arguments>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>//*[@id="${arg1}"]</arg>
-</arguments>
-<status status="PASS" endtime="20170201 12:31:55.583" starttime="20170201 12:31:51.919"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>//*[@id="${arg1}"]</arg>
-</arguments>
-<msg timestamp="20170201 12:31:55.601" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
-<status status="PASS" endtime="20170201 12:32:01.369" starttime="20170201 12:31:55.593"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>//*[@id="${arg2}"]</arg>
-</arguments>
-<status status="PASS" endtime="20170201 12:32:01.648" starttime="20170201 12:32:01.382"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>//*[@id="${arg2}"]</arg>
-</arguments>
-<msg timestamp="20170201 12:32:01.650" level="INFO">Clicking button '//*[@id="fiFlag"]'.</msg>
-<status status="PASS" endtime="20170201 12:32:05.650" starttime="20170201 12:32:01.649"></status>
-</kw>
+<msg timestamp="20170213 09:15:12.635" level="INFO">Opening browser 'Firefox' to base url 'http://54.89.144.228'</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170201 12:32:13.703" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170201 12:32:13.724" starttime="20170201 12:32:05.670"></status>
+<msg timestamp="20170213 09:15:12.641" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170213 09:15:12.641" starttime="20170213 09:15:12.640"></status>
 </kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>//*[@id="${arg1}"]</arg>
-</arguments>
-<status status="PASS" endtime="20170201 12:32:40.825" starttime="20170201 12:32:13.724"></status>
+<msg timestamp="20170213 09:15:12.641" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170213 09:15:12.643" level="FAIL">IOError: [Errno 13] Permission denied: 'geckodriver.log'</msg>
+<status status="FAIL" endtime="20170213 09:15:12.643" starttime="20170213 09:15:12.635"></status>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>//*[@id="${arg1}"]</arg>
-</arguments>
-<msg timestamp="20170201 12:32:40.894" level="INFO">Clicking button '//*[@id="ruFlag"]'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170201 12:33:07.062" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170201 12:33:07.065" starttime="20170201 12:33:06.194"></status>
-</kw>
-<msg timestamp="20170201 12:33:07.095" level="FAIL">StaleElementReferenceException: Message: The element reference is stale. Either the element is no longer attached to the DOM or the page has been refreshed.
-</msg>
-<status status="FAIL" endtime="20170201 12:33:07.096" starttime="20170201 12:32:40.868"></status>
-</kw>
-<status status="FAIL" endtime="20170201 12:33:07.096" starttime="20170201 12:31:51.911"></status>
-</kw>
-<status status="FAIL" endtime="20170201 12:33:07.096" critical="yes" starttime="20170201 12:31:21.115">StaleElementReferenceException: Message: The element reference is stale. Either the element is no longer attached to the DOM or the page has been refreshed.
-</status>
+<status status="FAIL" endtime="20170213 09:15:12.644" critical="yes" starttime="20170213 09:15:12.634">IOError: [Errno 13] Permission denied: 'geckodriver.log'</status>
 </test>
-<status status="FAIL" endtime="20170201 12:33:07.097" starttime="20170201 12:31:17.538"></status>
+<status status="FAIL" endtime="20170213 09:15:12.644" starttime="20170213 09:15:12.556"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="1">Critical Tests</stat>
-<stat fail="1" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Locatortest" pass="1">Locatortest</stat>
+<stat fail="1" id="s1" name="Buildenviroment" pass="0">Buildenviroment</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20170213 09:15:12.641" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
 </errors>
 </robot>

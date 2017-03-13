@@ -1,0 +1,65 @@
+*** Settings ***
+Library		FakerLibrary
+Library		Selenium2Library
+Resource	resource.robot
+*** Variables ***
+
+*** Keywords ***
+
+*** Testcases ***
+Check Priority Rule Is Working Correctly On False Settings
+    Delay    0.1
+    Open Index Page
+    Admin Sign In
+    Go To Admin Page
+    Click Link    /rules
+    Wait Until Page Contains    Change rules
+    Capture Page Screenshot
+    Page Should Contain Radio Button    edit-priority-0
+    Select Radio Button    priority    0
+    Capture Page Screenshot
+    Click Button    updateButton
+    Close Browser
+
+Check Priority Rule Is Working Correctly On True Settings
+    Delay    0.1
+    Open Index Page
+    Admin Sign In
+    Go To Admin Page
+    Click Link    /rules
+    Capture Page Screenshot
+    Page Should Contain Radio Button    edit-priority-1
+    Select Radio Button    priority    1
+    Capture Page Screenshot
+    Click Button    updateButton
+    Close Browser
+
+Check Location Rule Is Working Correctly On True Settings
+    Delay    0.1
+    Open Index Page
+    Admin Sign In
+    Go To Admin Page
+    Click Link    /rules
+    Wait Until Page Contains    Change rules
+    Capture Page Screenshot
+    Page Should Contain Radio Button    edit-country-1
+    Select Radio Button    priority    1
+    Capture Page Screenshot
+    Click Button    updateButton
+    Close Browser
+
+
+Check Location Rule Is Working Correctly On False Settings
+    Delay    0.1
+    Open Index Page
+    Admin Sign In
+    Go To Admin Page
+    Click Link    /rules
+    Wait Until Page Contains    Change rules
+    Capture Page Screenshot
+    Page Should Contain Radio Button    edit-country-0
+    Select Radio Button    priority    0
+    Capture Page Screenshot
+    Click Button    updateButton
+    Close Browser
+

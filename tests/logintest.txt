@@ -18,7 +18,7 @@ Register, Login
     ${TEST_PASSWORD}=    Password
     Open Index Page
     Go To Register Page
-    Wait And Check If Page Contains    Registration
+    Wait And Check If Page Contains    Rekisteröidy
     Input Name And Password    ${TEST_USERNAME}    ${TEST_PASSWORD}
     Send Form
     Wait And Check If Page Contains    Registration was succesfull!

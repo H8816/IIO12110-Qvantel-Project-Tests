@@ -8,15 +8,45 @@ Library    FakerLibrary
 *** Variables ***
 
 *** Test Cases ***
-
-AdTest1, Finnish language
+AdTest1, UserAgent Add
     Open Index Page
-    Commercial Test    fiFlag    ruFlag    adImage    https://i.imgur.com/fgLzYTb.png
+    Page Should Contain Image    https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/2000px-Tux.svg.png
     Close Browser
 
-AdTest2, Russian language
+AdTest1, Top Banner ad, Finnish Location
     Open Index Page
-    Commercial Test    ruFlag    fiFlag    adImage    https://i.imgur.com/ptPEDFK.png
+    Capture Page Screenshot
+    Wait Until Page Contains Element    adImageHeader
+    Page Should Contain Image    http://student.labranet.jamk.fi/~H8951/images/jacket_winter.jpg
     Close Browser
 
+AdTest2, Top Banner ad, Russian Location
+    Open Index Page
+    Go To    http://ru3.gsr.awhoer.net
+    Input Text    wprx-urltext    http://34.200.105.74
+    Capture Page Screenshot
+    Set Selenium Speed    2 seconds
+    Click Element    //*[@class='wprx-button']
+    Click Element    //*[@class='wprx-button']
+    Capture Page Screenshot
+    Click Element    wprx-hideme
+    Capture Page Screenshot
+    Page Should Contain Image    http://student.labranet.jamk.fi/~H8951/images/jacket_ad.jpg
+    Capture Page Screenshot
+    Close Browser
+
+AdTest3, Top Banner ad, French Location
+    Open Index Page
+    Go To    http://fr2.gsr.awhoer.net
+    Capture Page Screenshot
+    Input Text    wprx-urltext    http://34.200.105.74/
+    Capture Page Screenshot
+    Set Selenium Speed    2 seconds
+    Click Element    //*[@class='wprx-button']
+    Click Element    //*[@class='wprx-button']
+    Wait Until Page Contains Element    adImageHeader
+    Click Element    wprx-hideme
+    Page Should Contain Image    http://student.labranet.jamk.fi/~H8951/images/french_jacket.jpg
+    Capture Page Screenshot
+    Close Browser
 
